@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #ededed;
+  --secondary: #222222;
+  --accent: #ffe66d;
+}
+
+@theme inline {
+  --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-lexend-deca);
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-lexend-deca);
+  @apply text-base;
+}
+
+@layer components {
+  .button {
+    @apply px-5 py-2 rounded-md outline-none bg-foreground text-secondary font-[500] cursor-pointer;
+  }
+
+  .practice-container {
+    @apply flex flex-col items-center justify-center gap-20 max-w-screen-md w-full py-10 border border-foreground rounded-lg overflow-hidden;
+  }
+
+  .disabled-button {
+    @apply cursor-not-allowed opacity-50;
+  }
+}

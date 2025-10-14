@@ -1,0 +1,11 @@
+import type { Metadata } from "next";
+import Practice2 from "@/app/ui/transitions/Practice2";
+
+export const metadata: Metadata = {
+  title: "Transitions Practice 2 - Motion Practice",
+  description: "Advanced transition practice with Motion. Explore complex timing functions and easing curves.",
+};
+
+export default function TransitionsPractice2() {
+  return <Practice2 />;
+}
