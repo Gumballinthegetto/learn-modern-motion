@@ -19,7 +19,7 @@ export default function Practice5() {
       x: [0, -50, -100, -50, 0, 50, 100],
       y: [0, 50, 100, 50, 0, -50, -100],
       scale: [1, .6, 1, .6, 1, .6, 1],
-      rotate: ['0deg', '-200deg', '200deg', '-200deg', '200deg', '-200deg', '0deg'],
+      rotate: ['0deg', '-90deg', '90deg', '-90deg', '90deg', '-90deg', '0deg'],
       transition: {
         type: 'tween',
         duration: 2,
