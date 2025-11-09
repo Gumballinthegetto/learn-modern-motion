@@ -1,13 +1,30 @@
+'use client';
+
 import Image from "next/image";
 import { FingerAccessIcon } from "@/public/assets/assets";
 import Underline from "./Underline";
 import Link from "next/link";
-import PopUpContainer from './PopUpContainer';
-
+import { motion, Variants } from 'motion/react';
 
 export default function NotFound() {
+  const popUpContainerVariants: Variants = {
+    initial: {
+      y: 10,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <PopUpContainer>
+    <motion.div
+      variants={popUpContainerVariants}
+      initial="initial"
+      animate="animate"
+      transition={{ duration: .2, ease: 'easeInOut' }}
+    >
       <div className="min-h-screen flex flex-col items-center justify-center">
         <Image
           src="/assets/404-error.png"
@@ -31,6 +48,6 @@ export default function NotFound() {
           </div>
         </div>
       </div>
-    </PopUpContainer>
+    </motion.div>
   );
 }

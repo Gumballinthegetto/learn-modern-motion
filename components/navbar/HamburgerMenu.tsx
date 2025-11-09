@@ -20,7 +20,7 @@ export default function HamburgerMenu() {
 
   const line1Variants: Variants = {
     opened: {
-      y: 5,
+      y: 7,
       rotate: "45deg",
     },
     closed: {
@@ -29,7 +29,17 @@ export default function HamburgerMenu() {
   };
   const line2Variants: Variants = {
     opened: {
-      y: -6,
+      x: -5,
+      opacity: 0,
+    },
+    closed: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+  const line3Variants: Variants = {
+    opened: {
+      y: -7,
       rotate: "-45deg",
     },
     closed: {
@@ -39,7 +49,7 @@ export default function HamburgerMenu() {
 
   return (
     <motion.div
-      className="group flex flex-col items-center justify-center gap-2 cursor-pointer"
+      className="group flex flex-col items-center justify-center gap-1 cursor-pointer"
       variants={parentVariants}
       initial="closed"
       animate={isMobileNavOpened ? "opened" : "closed"}
@@ -55,6 +65,10 @@ export default function HamburgerMenu() {
       <motion.div
         className="w-6 h-[3px] bg-foreground rounded-lg transition-colors duration-200 group-hover:bg-accent"
         variants={line2Variants}
+      />
+      <motion.div
+        className="w-6 h-[3px] bg-foreground rounded-lg transition-colors duration-200 group-hover:bg-accent"
+        variants={line3Variants}
       />
     </motion.div>
   );

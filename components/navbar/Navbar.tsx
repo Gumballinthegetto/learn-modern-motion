@@ -15,7 +15,7 @@ export default function Navbar() {
 
   const { scrollY } = useScroll();
   // Smooth the scroll value with a spring, then map to color
-  const smoothedY = useSpring(scrollY, { stiffness: 80, damping: 26, mass: 1 });
+  const smoothedY = useSpring(scrollY, { stiffness: 120, damping: 26, mass: 1 });
   const backgroundColor = useTransform(
     smoothedY,
     [0, 40],

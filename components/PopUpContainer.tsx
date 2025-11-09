@@ -27,7 +27,11 @@ export default function PopUpContainer({ children, className }: PopUpProps) {
       initial="initial"
       animate="animate"
       transition={{ duration: .2, ease: 'easeInOut' }}
-      className={cn("space-y-4 py-4", className)}
+      className={cn(
+        "space-y-4 py-4",
+        "md:border md:rounded-lg md:my-4 md:px-6 md:pb-8 md:pt-6",
+        className
+      )}
     >
       {children}
     </motion.div>
