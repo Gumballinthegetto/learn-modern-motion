@@ -1,9 +1,9 @@
-import { PinIcon } from "@/public/assets/assets";
+import { PinIcon2 } from "@/public/assets/assets";
 import { ReactNode } from "react";
 import { cn } from "@/utils/cn";
 
 interface PracticeProps {
-  title?: string;
+  title: string;
   objective: string;
   instructions: (string | ReactNode)[];
   extraContentBelow?: ReactNode;
@@ -12,16 +12,18 @@ interface PracticeProps {
 
 export default function Practice({ title, objective, instructions, extraContentBelow, className }: PracticeProps) {
   return (
-    <div className={cn('flex flex-col items-start justify-center w-full', className)}>
-      {title ? (
-        <h1 className='text-[1.1rem] font-medium pb-3'>{title}</h1>
-      ) : null}
+    <div className={cn(
+        'flex flex-col items-start justify-center w-full pt-2',
+        "md:flex md:flex-row md:gap-10 md:min-h-[62vh]",
+        className
+      )}>
       <div className='flex flex-col items-start justify-center w-full pb-2'>
-        <div className='flex items-center justify-start gap-2 w-full'>
-          <PinIcon strokeWidth={2} width={20} height={20} />
-          <h2>{objective}</h2>
+        <h1 className='text-[1.3rem] md:text-[1.6rem] font-medium pb-3'>{title}</h1>
+        <div className='flex items-center justify-between w-full gap-4 rounded-lg border px-4 py-4'>
+          <h2 className="text-[1rem]">{objective}</h2>
+          <PinIcon2 className="min-w-[30px] min-h-[30px] transform rotate-45 origin-center" strokeWidth={2} width={30} height={30} />
         </div>
-        <ul className='flex flex-col items-start justify-center list-decimal list-inside py-3 gap-1'>
+        <ul className='flex flex-col items-start justify-center list-decimal list-inside py-3 gap-3 md:gap-4'>
           {instructions.map((step, index) => (
             <li key={index}>{step}</li>
           ))}

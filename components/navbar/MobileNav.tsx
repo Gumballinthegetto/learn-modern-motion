@@ -14,19 +14,16 @@ export default function MobileNav({ links, isMobileNavOpened, setIsMobileNavOpen
   const panelVariants: Variants = {
     closed: {
       transition: {
-        type: 'spring',
-        damping: 20,
-        stiffness: 110,
-        duration: .3,
+        ease: 'easeInOut',
+        delay: .4,
         when: "afterChildren",
-        delayChildren: stagger(.05, { from: 'last' }),
+        delayChildren: stagger(.1, { from: 'last' }),
       }
     },
     opened: {
       transition: {
-        type: 'spring',
-        damping: 20,
-        stiffness: 110,
+        duration: .3,
+        ease: 'easeInOut',
         delayChildren: stagger(.1, { from: 'first' }),
       },
     },
@@ -54,9 +51,9 @@ export default function MobileNav({ links, isMobileNavOpened, setIsMobileNavOpen
         variants={overlayVariants}
         initial="closed"
         animate={isMobileNavOpened ? "opened" : "closed"}
-        exit="closed"
         onClick={setIsMobileNavOpened}
         className="absolute inset-0 bg-black/90"
+        transition={{ ease: 'easeInOut' }}
       />
 
       <motion.nav
