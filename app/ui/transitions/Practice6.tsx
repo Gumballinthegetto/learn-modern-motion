@@ -4,11 +4,12 @@ import CloseBtn from "@/components/CloseBtn";
 import PopUpContainer from "@/components/PopUpContainer";
 import Practice from "@/components/Practice";
 import { KissEmojiIcon } from "@/public/assets/assets";
-import { motion, Variants } from "motion/react";
+import { AnimatePresence, motion, Variants } from "motion/react";
 import { useEffect, useState } from "react";
 
 export default function Practice6() {
   const [isOpen, setIsOpen] = useState(false);
+  const [toastKey, setToastKey] = useState(0);
 
   const toastVariants: Variants = {
     close: {
@@ -31,6 +32,15 @@ export default function Practice6() {
   };
 
   const TOAST_DURATION = 3000;
+
+  const handleShow = () => {
+    if (!isOpen) {
+      setToastKey((key) => key + 1);
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -55,39 +65,43 @@ export default function Practice6() {
           ]}
           extraContentBelow={
             <div className="relative practice-container px-6">
-              <motion.div
-                className="absolute top-5 border rounded-lg py-6 px-4 w-[90%] overflow-hidden"
-                variants={toastVariants}
-                initial="close"
-                animate={ isOpen ? "open" : "close" }
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <KissEmojiIcon width={35} height={35} />
-                    <p>Toast got clicked!</p>
-                  </div>
-                  <CloseBtn
-                    isShown={isOpen}
-                    setIsShown={setIsOpen}
-                  />
-                </div>
-
-                {/* Progress bar */}
+              <AnimatePresence>
                 {isOpen && (
                   <motion.div
-                    className="absolute bottom-0 left-0 h-1 bg-accent origin-left w-full"
-                    variants={progressBarVariants}
-                    initial="initial"
-                    animate="animate"
-                    transition={{
-                      duration: TOAST_DURATION / 1000,
-                      ease: "linear",
-                    }}
-                  />
+                    key={toastKey}
+                    className="absolute top-5 border rounded-lg py-6 px-4 w-[90%] overflow-hidden"
+                    variants={toastVariants}
+                    initial="close"
+                    animate="open"
+                    exit="close"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <KissEmojiIcon width={35} height={35} />
+                        <p>Toast got clicked!</p>
+                      </div>
+                      <CloseBtn
+                        isShown={isOpen}
+                        setIsShown={setIsOpen}
+                      />
+                    </div>
+
+                    {/* Progress bar */}
+                    <motion.div
+                      className="absolute bottom-0 left-0 h-1 bg-accent origin-left w-full"
+                      variants={progressBarVariants}
+                      initial="initial"
+                      animate="animate"
+                      transition={{
+                        duration: TOAST_DURATION / 1000,
+                        ease: "linear",
+                      }}
+                    />
+                  </motion.div>
                 )}
-              </motion.div>
+              </AnimatePresence>
               <motion.button
-                onClick={() => setIsOpen((prevState) => !prevState)}
+                onClick={handleShow}
                 className="button"
               >
                 { isOpen ? "Hide" : "Show" }

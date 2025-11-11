@@ -5,7 +5,7 @@ import PopUpContainer from "@/components/PopUpContainer";
 import Practice from "@/components/Practice";
 import Underline from "@/components/Underline";
 import Banana from "@/public/assets/icons/banana";
-import { motion, Variants } from "motion/react";
+import { AnimatePresence, motion, Variants } from "motion/react";
 import { Dispatch, SetStateAction, useState } from "react";
 
 type ModalProps = {
@@ -29,14 +29,23 @@ export default function Practice3() {
             "Add a button to trigger the modal.",
           ]}
           extraContentBelow={
-            <motion.div className="practice-container">
-              <motion.div className="px-6 w-full">
-                <Modal
-                  isShown={show}
-                  setIsShown={setShow}
-                />
+            <motion.div className="relative practice-container">
+              <motion.div className="absolute top-5 w-[90%]">
+                <AnimatePresence>
+                  {show && (
+                    <Modal
+                      isShown={show}
+                      setIsShown={setShow}
+                    />
+                  )}
+                </AnimatePresence>
               </motion.div>
-              <button onClick={() => setShow((prevState) => !prevState)} className="button">{ show ? "Hide" : "Show" }</button>
+              <button
+                onClick={() => setShow((prevState) => !prevState)}
+                className="button absolute bottom-[20%]"
+              >
+                { show ? "Hide" : "Show" }
+              </button>
             </motion.div>
           }
         />
@@ -71,7 +80,8 @@ const Modal = ({ isShown, setIsShown }: ModalProps) => {
       className="border rounded-lg p-4 bg-black/50"
       variants={modalContainerVariants}
       initial="hide"
-      animate={ isShown ? "show" : "hide" }
+      animate="show"
+      exit="hide"
     >
       <div className="relative flex flex-col">
         <div className="flex items-start justify-between">
@@ -83,7 +93,10 @@ const Modal = ({ isShown, setIsShown }: ModalProps) => {
             </div>
           </div>
           <div className="mt-2">
-            <CloseBtn isShown={isShown} setIsShown={setIsShown} />
+            <CloseBtn
+              isShown={isShown}
+              setIsShown={setIsShown}
+            />
           </div>
         </div>
         <div className="py-10"/>
