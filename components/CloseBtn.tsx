@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, Variants } from 'motion/react';
+import { AnimatePresence, motion, Variants } from 'motion/react';
 import { Dispatch, SetStateAction } from 'react';
 
 type CloseBtnProps = {
@@ -46,7 +46,8 @@ export default function CloseBtn({ isShown, setIsShown }: CloseBtnProps) {
       className="flex flex-col gap-2 items-center justify-center cursor-pointer"
       variants={closeMenuBtnVariants}
       initial="close"
-      animate={ isShown ? "open" : "close" }
+      animate="open"
+      exit="close"
       whileHover={{ scale: 1.1 }}
     >
       <motion.div
@@ -57,6 +58,6 @@ export default function CloseBtn({ isShown, setIsShown }: CloseBtnProps) {
         className="w-6 h-[3px] bg-white rounded-lg"
         variants={closeMenuBtnLine2Variants}
       />
-  </motion.button>
+    </motion.button>
   );
 }

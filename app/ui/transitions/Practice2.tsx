@@ -4,7 +4,7 @@ import PopUpContainer from "@/components/PopUpContainer";
 import Practice from "@/components/Practice";
 import { ArrowIcon, SideBarIcon2 } from "@/public/assets/assets";
 import Banana from "@/public/assets/icons/banana";
-import { motion, stagger, Variants } from "motion/react";
+import { AnimatePresence, motion, stagger, Variants } from "motion/react";
 import { SetStateAction, useState, Dispatch } from 'react';
 import Link from "next/link";
 import { useMobileNavbar } from "@/provider/MobileNavbarProvider";
@@ -76,10 +76,14 @@ export default function Practice2() {
                   { show ? "Hide" : "Show" }
                 </button>
               </div>
-              <SideBar
-                isShown={show}
-                setIsShown={setShow}
-              />
+              <AnimatePresence>
+                {show && (
+                  <SideBar
+                    isShown={show}
+                    setIsShown={setShow}
+                  />
+                )}
+              </AnimatePresence>
             </motion.div>
           }
         />
@@ -96,8 +100,8 @@ const SideBar = ({ isShown, setIsShown }: SideBarProps) => {
       x: "100%",
       opacity: 0,
       transition: {
-        when: "afterChildren",
         delay: .7,
+        delayChildren: stagger(.1, { from: 'first', ease: 'easeInOut' }),
         ease: 'easeInOut',
       },
     },
@@ -105,7 +109,7 @@ const SideBar = ({ isShown, setIsShown }: SideBarProps) => {
       x: 0,
       opacity: 1,
       transition: {
-        when: "beforeChildren",
+        delayChildren: stagger(.1, { from: 'last', ease: 'easeInOut' }),
         ease: 'easeInOut',
       }
     },
@@ -114,12 +118,12 @@ const SideBar = ({ isShown, setIsShown }: SideBarProps) => {
   const linksListVariants: Variants = {
     close: {
       transition: {
-        delayChildren: stagger(.1, { from: 'first', ease: 'easeInOut' }),
+        delayChildren: stagger(.1, { from: 'last', ease: 'easeInOut' }),
       }
     },
     open: {
       transition: {
-        delayChildren: stagger(.1, { from: 'first' }),
+        delayChildren: stagger(.1, { from: 'first', ease: 'easeInOut' }),
       }
     },
   };
@@ -144,10 +148,11 @@ const SideBar = ({ isShown, setIsShown }: SideBarProps) => {
       )}
       variants={containerVariants}
       initial="hide"
-      animate={ isShown ? "show" : "hide" }
+      animate="show"
+      exit="hide"
       transition={{ duration: .4, ease: "easeInOut" }}
     >
-      <div className="absolute top-0 flex items-center justify-between w-full border-b p-6">
+      <motion.div className="absolute top-0 flex items-center justify-between w-full border-b p-6">
         <Link
           onClick={() => setIsMobileNavOpened(false)}
           href="/"
@@ -160,13 +165,17 @@ const SideBar = ({ isShown, setIsShown }: SideBarProps) => {
           />
           <h1>Nanas Corp.</h1>
         </Link>
-        <CloseBtn isShown={isShown} setIsShown={setIsShown} />
-      </div>
+        <CloseBtn
+          isShown={isShown}
+          setIsShown={setIsShown}
+        />
+      </motion.div>
       <motion.ul
         className="flex flex-col items-start gap-8 justify-center px-6 py-8"
         variants={linksListVariants}
         initial="close"
-        animate={ isShown ? "open" : "close" }
+        animate="open"
+        exit="close"
       >
         {links.map(({ href, label }) =>
           <motion.li
