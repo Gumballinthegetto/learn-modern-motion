@@ -9,7 +9,6 @@ import { AnimatePresence, motion, Variants } from "motion/react";
 import { Dispatch, SetStateAction, useState } from "react";
 
 type ModalProps = {
-  isShown: boolean;
   setIsShown: Dispatch<SetStateAction<boolean>>;
 };
 
@@ -34,7 +33,6 @@ export default function Practice3() {
                 <AnimatePresence>
                   {show && (
                     <Modal
-                      isShown={show}
                       setIsShown={setShow}
                     />
                   )}
@@ -54,7 +52,7 @@ export default function Practice3() {
   );
 }
 
-const Modal = ({ isShown, setIsShown }: ModalProps) => {
+const Modal = ({ setIsShown }: ModalProps) => {
   const modalContainerVariants: Variants = {
     hide: {
       y: "-100%",

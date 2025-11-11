@@ -13,7 +13,6 @@ import { navigationConfig } from "@/config/navigation";
 import CloseBtn from "@/components/CloseBtn";
 
 type SideBarProps = {
-  isShown: boolean;
   setIsShown: Dispatch<SetStateAction<boolean>>;
 };
 
@@ -79,7 +78,6 @@ export default function Practice2() {
               <AnimatePresence>
                 {show && (
                   <SideBar
-                    isShown={show}
                     setIsShown={setShow}
                   />
                 )}
@@ -92,7 +90,7 @@ export default function Practice2() {
   );
 }
 
-const SideBar = ({ isShown, setIsShown }: SideBarProps) => {
+const SideBar = ({ setIsShown }: SideBarProps) => {
   const { setIsMobileNavOpened } = useMobileNavbar();
 
   const containerVariants: Variants =  {
