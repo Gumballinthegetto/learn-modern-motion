@@ -6,64 +6,86 @@ import { ReactNode } from "react";
 
 type MobileNavProps = {
   links: { href: string; label: string; icon: ReactNode; }[];
-  isMobileNavOpened: boolean;
   setIsMobileNavOpened: () => void;
 };
 
-export default function MobileNav({ links, isMobileNavOpened, setIsMobileNavOpened }: MobileNavProps) {
+export default function MobileNav({ links, setIsMobileNavOpened }: MobileNavProps) {
   const panelVariants: Variants = {
-    closed: {
+    close: {
       transition: {
-        ease: 'easeInOut',
-        delay: .4,
         when: "afterChildren",
-        delayChildren: stagger(.1, { from: 'last' }),
+        delay: .3,
       }
     },
-    opened: {
+    open: {
       transition: {
-        duration: .3,
-        ease: 'easeInOut',
-        delayChildren: stagger(.1, { from: 'first' }),
+        when: "beforeChildren",
       },
     },
   };
 
   const overlayVariants: Variants = {
-    closed: { opacity: 0 },
-    opened: { opacity: 1 },
+    close: {
+      opacity: 0,
+      transition: {
+        delay: .4,
+      }
+    },
+    open: {
+      opacity: 1,
+    },
+  };
+
+  const listVariants: Variants = {
+    close: {
+      transition: {
+        delayChildren: stagger(.1, { from: 'last', ease: 'easeInOut' }),
+      }
+    },
+    open: {
+      transition: {
+        delayChildren: stagger(.1, { from: 'first', ease: 'easeInOut' }),
+      },
+    },
   };
 
   const itemsVariants: Variants = {
-    closed: {
+    close: {
       opacity: 0,
       x: -5,
     },
-    opened: {
+    open: {
       opacity: 1,
       x: 0,
     },
   };
 
   return (
-    <div className="fixed inset-0 z-[98] sm:hidden">
+    <div
+      className="fixed inset-0 z-[98] sm:hidden"
+    >
       <motion.div
         variants={overlayVariants}
-        initial="closed"
-        animate={isMobileNavOpened ? "opened" : "closed"}
+        initial="close"
+        animate="open"
+        exit="close"
         onClick={setIsMobileNavOpened}
         className="absolute inset-0 bg-black/90"
-        transition={{ ease: 'easeInOut' }}
+        transition={{ duration: .3, ease: 'easeInOut' }}
       />
 
       <motion.nav
         variants={panelVariants}
-        initial="closed"
-        animate={isMobileNavOpened ? "opened" : "closed"}
-        exit="closed"
+        initial="close"
+        animate="open"
+        exit="close"
         className="absolute left-0 right-0 bottom-0 top-16 origin-top"
+        transition={{ duration: .3, ease: 'easeInOut' }}
       >
-        <ul className="flex flex-col items-start justify-center">
+        <motion.ul
+          variants={listVariants}
+          className="flex flex-col items-start justify-center"
+        >
           {links.map(({ href, label, icon }) => (
             <motion.li
                 variants={itemsVariants}
@@ -87,7 +109,7 @@ export default function MobileNav({ links, isMobileNavOpened, setIsMobileNavOpen
               </Link>
             </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </motion.nav>
     </div>
   );

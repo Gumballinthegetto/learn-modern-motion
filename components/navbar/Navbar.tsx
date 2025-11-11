@@ -76,7 +76,6 @@ export default function Navbar() {
         {isMobileNavOpened &&
           <MobileNav
             links={links}
-            isMobileNavOpened={isMobileNavOpened}
             setIsMobileNavOpened={toggleMobileNav}
           />
         }
