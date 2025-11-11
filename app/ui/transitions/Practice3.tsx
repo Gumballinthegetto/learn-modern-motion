@@ -94,7 +94,6 @@ const Modal = ({ isShown, setIsShown }: ModalProps) => {
           </div>
           <div className="mt-2">
             <CloseBtn
-              isShown={isShown}
               setIsShown={setIsShown}
             />
           </div>

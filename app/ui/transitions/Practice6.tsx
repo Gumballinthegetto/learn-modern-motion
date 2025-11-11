@@ -81,7 +81,6 @@ export default function Practice6() {
                         <p>Toast got clicked!</p>
                       </div>
                       <CloseBtn
-                        isShown={isOpen}
                         setIsShown={setIsOpen}
                       />
                     </div>

@@ -166,7 +166,6 @@ const SideBar = ({ isShown, setIsShown }: SideBarProps) => {
           <h1>Nanas Corp.</h1>
         </Link>
         <CloseBtn
-          isShown={isShown}
           setIsShown={setIsShown}
         />
       </motion.div>

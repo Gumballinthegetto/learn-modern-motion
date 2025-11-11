@@ -1,14 +1,13 @@
 'use client';
 
-import { AnimatePresence, motion, Variants } from 'motion/react';
+import { motion, Variants } from 'motion/react';
 import { Dispatch, SetStateAction } from 'react';
 
 type CloseBtnProps = {
-  isShown: boolean;
   setIsShown: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function CloseBtn({ isShown, setIsShown }: CloseBtnProps) {
+export default function CloseBtn({ setIsShown }: CloseBtnProps) {
   const closeMenuBtnVariants: Variants = {
     close: {
 
