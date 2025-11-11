@@ -38,10 +38,6 @@ export default function Practice2() {
     },
   };
 
-  const clickMeVariants: Variants = {
-
-  };
-
   return (
     <PopUpContainer>
       <div className="flex flex-col items-start justify-start gap-2 w-full">
