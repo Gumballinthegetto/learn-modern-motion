@@ -2,13 +2,15 @@
 
 import PopUpContainer from "@/components/PopUpContainer";
 import Practice from "@/components/Practice";
-import { motion, useMotionValue, useTransform, Variants, animate, useAnimation } from "motion/react";
+import { motion, useMotionValue, useTransform, Variants, animate } from "motion/react";
 import { useState } from "react";
 import { cn } from "@/utils/cn";
 
 export default function Practice4() {
   const [isClicked, setIsClicked] = useState(false);
+  const [state, setState] = useState<"rest" | "hover" | "leave">("rest");
 
+  /** Background color animation (clicked-based) */
   const clickProgress = useMotionValue(0);
   const backgroundColor = useTransform(
     clickProgress,
@@ -16,14 +18,15 @@ export default function Practice4() {
     ["#ffffff", "#ffe66d"],
   );
 
-  const controls = useAnimation();
-
-  const containerVariants: Variants = {
+  const buttonVariants: Variants = {
     rest: {
       scale: 1,
     },
     hover: {
       scale: 1.03,
+    },
+    leave: {
+      scale: 0.98,
     },
   };
 
@@ -51,20 +54,13 @@ export default function Practice4() {
             <>Use Motion&apos;s <code>whileTap</code> prop to animate the button when clicked (e.g., scale down).</>,
             <>Add a hover effect using the <code>WhileHover</code> prop.</>,
           ]}
+          navLinkType="transitions"
           extraContentBelow={
             <motion.div className="practice-container">
               <motion.button
-                variants={containerVariants}
-                onClick={async () => {
-                  const newState = !isClicked;
-                  setIsClicked(newState);
-                  animate(clickProgress, newState ? 1 : 0, {
-                    duration: .2,
-                    ease: 'easeInOut',
-                  });
-                  // Replay the same text animation on click
-                  await controls.start('hover');
-                }}
+                variants={buttonVariants}
+                animate={state}
+                initial="rest"
                 style={{ backgroundColor }}
                 className={cn(
                   "button py-3 px-6",
@@ -72,11 +68,30 @@ export default function Practice4() {
                   "lg:px-8 lg:text-[1.1rem]",
                   isClicked ? "bg-accent" : "",
                 )}
-                initial="rest"
-                whileHover="hover"
+                onHoverStart={() => setState("hover")}
+                onHoverEnd={() => setState("leave")}
+
+                /** Click logic */
+                onClick={() => {
+                  const next = !isClicked;
+                  setIsClicked(next);
+
+                  // Trigger text animation for click
+                  setState('leave');
+
+                  // Animate background color
+                  animate(clickProgress, next ? 1 : 0, {
+                    duration: 0.2,
+                    ease: "easeInOut",
+                  });
+
+                  // Return to hover or rest after click animation
+                  setTimeout(() => {
+                    setState(next ? "hover" : "rest");
+                  }, 500);
+                }}
+
                 whileTap={{ scale: 0.9 }}
-                onHoverStart={() => controls.start('hover')}
-                onHoverEnd={() => controls.start('leave')}
               >
                 <div
                   className={cn(
@@ -86,7 +101,7 @@ export default function Practice4() {
                     className="pointer-events-none"
                     variants={textVariants}
                     initial="rest"
-                    animate={controls}
+                    animate={state}
                     transition={{
                       type: "tween",
                       duration: 0.4,

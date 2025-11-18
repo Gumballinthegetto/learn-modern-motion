@@ -59,6 +59,7 @@ export default function Practice6() {
           'Use multiple elements (e.g., squares).',
           'Animate them in a sequence where one moves right, then the next one follows after a delay, using different transformations (e.g., move, rotate).'
         ]}
+        navLinkType="transformations"
         extraContentBelow={
           <div className="practice-container">
             <motion.div

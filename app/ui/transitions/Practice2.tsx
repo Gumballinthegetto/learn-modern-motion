@@ -4,7 +4,7 @@ import PopUpContainer from "@/components/PopUpContainer";
 import Practice from "@/components/Practice";
 import { ArrowIcon, SideBarIcon2 } from "@/public/assets/assets";
 import Banana from "@/public/assets/icons/banana";
-import { AnimatePresence, motion, stagger, Variants } from "motion/react";
+import { motion, stagger, Variants } from "motion/react";
 import { SetStateAction, useState, Dispatch } from 'react';
 import Link from "next/link";
 import { useMobileNavbar } from "@/provider/MobileNavbarProvider";
@@ -13,6 +13,7 @@ import { navigationConfig } from "@/config/navigation";
 import CloseBtn from "@/components/CloseBtn";
 
 type SideBarProps = {
+  isShown: boolean;
   setIsShown: Dispatch<SetStateAction<boolean>>;
 };
 
@@ -38,59 +39,59 @@ export default function Practice2() {
   };
 
   return (
-    <PopUpContainer>
-      <div className="flex flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 2 - Slide In from the Left"
-          objective="Create a sidebar that slides in from the left when a button is clicked."
-          instructions={[
-            <>Create a sidebar component using <code>motion.div</code>.</>,
-            "Style the sidebar with tailwind CSS (e.g., width, background color)",
-            <>Use Motion <code>animate</code> props to slide the sidebar in from the left.</>,
-            "Add a button to toggle the sidebar's visibility.",
-          ]}
-          extraContentBelow={
-            <motion.div className="practice-container p-0 relative w-full flex items-center justify-between">
-              <motion.button
-                onClick={() => setShow((prevState) => !prevState)}
-                className={cn(
-                  "flex items-center gap-2 absolute top-1/2 -right-[8px] cursor-pointer",
-                )}
-                variants={sideBarBtnVariants}
-                initial="hidden"
-                animate={ show ? "visible" : "hidden" }
-              >
-                <motion.div
-                  className="flex items-center gap-1">
-                  <span className="text-sm">Click me</span>
-                  <ArrowIcon width={24} height={24} />
-                </motion.div>
-                <SideBarIcon2 className="rotate-270" width={30} height={30} />
-              </motion.button>
-              <div className="absolute bottom-8 z-10">
-                <button
-                  className="button"
+    <>
+      <PopUpContainer>
+        <div className="flex flex-col items-start justify-start gap-2 w-full">
+          <Practice
+            title="Practice 2 - Slide In from the Right"
+            objective="Create a sidebar that slides in from the Right when a button is clicked."
+            instructions={[
+              <>Create a sidebar component using <code>motion.div</code>.</>,
+              "Style the sidebar with tailwind CSS (e.g., width, background color)",
+              <>Use Motion <code>animate</code> props to slide the sidebar in from the right.</>,
+              "Add a button to toggle the sidebar's visibility.",
+            ]}
+            navLinkType="transitions"
+            extraContentBelow={
+              <motion.div className="practice-container p-0 relative w-full flex items-center justify-between">
+                <motion.button
                   onClick={() => setShow((prevState) => !prevState)}
+                  className={cn(
+                    "flex items-center gap-2 absolute top-1/2 -right-[8px] cursor-pointer",
+                  )}
+                  variants={sideBarBtnVariants}
+                  initial="hidden"
+                  animate={ show ? "visible" : "hidden" }
                 >
-                  { show ? "Hide" : "Show" }
-                </button>
-              </div>
-              <AnimatePresence>
-                {show && (
-                  <SideBar
-                    setIsShown={setShow}
-                  />
-                )}
-              </AnimatePresence>
-            </motion.div>
-          }
-        />
-      </div>
-    </PopUpContainer>
+                  <motion.div
+                    className="flex items-center gap-1">
+                    <span className="text-sm">Click me</span>
+                    <ArrowIcon width={24} height={24} />
+                  </motion.div>
+                  <SideBarIcon2 className="rotate-270" width={30} height={30} />
+                </motion.button>
+                <div className="absolute bottom-8 z-10">
+                  <button
+                    className="button"
+                    onClick={() => setShow((prevState) => !prevState)}
+                  >
+                    { show ? "Hide" : "Show" }
+                  </button>
+                </div>
+                <SideBar
+                  isShown={show}
+                  setIsShown={setShow}
+                />
+              </motion.div>
+            }
+          />
+        </div>
+      </PopUpContainer>
+    </>
   );
 }
 
-const SideBar = ({ setIsShown }: SideBarProps) => {
+const SideBar = ({ isShown, setIsShown }: SideBarProps) => {
   const { setIsMobileNavOpened } = useMobileNavbar();
 
   const containerVariants: Variants =  {
@@ -146,8 +147,7 @@ const SideBar = ({ setIsShown }: SideBarProps) => {
       )}
       variants={containerVariants}
       initial="hide"
-      animate="show"
-      exit="hide"
+      animate={ isShown ? "show" : "hide" }
       transition={{ duration: .4, ease: "easeInOut" }}
     >
       <motion.div className="absolute top-0 flex items-center justify-between w-full border-b p-6">
@@ -164,6 +164,7 @@ const SideBar = ({ setIsShown }: SideBarProps) => {
           <h1>Nanas Corp.</h1>
         </Link>
         <CloseBtn
+          isShown={isShown}
           setIsShown={setIsShown}
         />
       </motion.div>
@@ -171,8 +172,7 @@ const SideBar = ({ setIsShown }: SideBarProps) => {
         className="flex flex-col items-start gap-8 justify-center px-6 py-8"
         variants={linksListVariants}
         initial="close"
-        animate="open"
-        exit="close"
+        animate={ isShown ? "open" : "close" }
       >
         {links.map(({ href, label }) =>
           <motion.li

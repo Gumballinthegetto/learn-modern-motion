@@ -32,6 +32,7 @@ export default function Practice2() {
         'Create a circle using CSS.',
         'Animate the circle to move vertically, bouncing at the top of the container.'
        ]}
+       navLinkType='transformations'
        extraContentBelow={
         <div className='practice-container'>
           <motion.div

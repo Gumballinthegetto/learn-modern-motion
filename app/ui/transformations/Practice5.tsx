@@ -38,6 +38,7 @@ export default function Practice5() {
           'Create a shape (e.g., a square or circle).',
           'Animate the shape to move diagonally while rotating and scaling similtaneously.'
         ]}
+        navLinkType='transformations'
         extraContentBelow={
           <div className="practice-container">
             <motion.div

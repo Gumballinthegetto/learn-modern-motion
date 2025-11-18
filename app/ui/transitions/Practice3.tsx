@@ -27,6 +27,7 @@ export default function Practice3() {
             "Use motion to animate the modal's entrance and exit.",
             "Add a button to trigger the modal.",
           ]}
+          navLinkType="transitions"
           extraContentBelow={
             <motion.div className="relative practice-container">
               <motion.div className="absolute top-5 w-[90%]">
@@ -92,6 +93,7 @@ const Modal = ({ setIsShown }: ModalProps) => {
           </div>
           <div className="mt-2">
             <CloseBtn
+              isShown={true}
               setIsShown={setIsShown}
             />
           </div>

@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { ReactNode } from "react";
 import TransformationsNav from "../../ui/transformations/TransformationsNav";
+import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
+import { navigationConfig } from "@/config/navigation";
 
 export const metadata: Metadata = {
   title: "Transformations Practice",
@@ -18,9 +20,9 @@ export default function TransformationsLayout({
         <h1 className="text-xl font-semibold">Transformations</h1>
         <p className="text-base text-muted-foreground text-start py-4">Practice foundational transforms: translate, scale, rotate, skew, and transform-origin. Each exercise demonstrates common motion patterns and interaction hooks.</p>
         <TransformationsNav />
-        <div>
+        <PaginationWrapper links={navigationConfig.transformations}>
           {children}
-        </div>
+        </PaginationWrapper>
       </div>
     </section>
   );

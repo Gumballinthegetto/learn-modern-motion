@@ -24,6 +24,7 @@ export default function Practice1() {
             <>Use Tailwind CSS classes to style the div(e.g., padding, background color).</>,
             <>Add a button to toggle the visibility of <code>FadeComponent</code>.</>,
           ]}
+          navLinkType="transitions"
           extraContentBelow={
             <div className="practice-container">
               <FadeComponent isShown={show} />

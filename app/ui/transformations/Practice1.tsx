@@ -1,7 +1,7 @@
 'use client';
 
-import PopUpContainer from '../../../components/PopUpContainer';
-import Practice from '../../../components/Practice';
+import PopUpContainer from '@/components/PopUpContainer';
+import Practice from '@/components/Practice';
 import { motion, Variants } from 'motion/react';
 import { useState } from 'react';
 
@@ -31,6 +31,7 @@ export default function Practice1() {
             <>Create a simple box using a <code>div</code>.</>,
             'Use Motion to animate the box from left to right.',
           ]}
+          navLinkType='transformations'
           extraContentBelow={
             <div className='practice-container'>
               <motion.div
