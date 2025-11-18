@@ -4,10 +4,11 @@ import { motion, Variants } from 'motion/react';
 import { Dispatch, SetStateAction } from 'react';
 
 type CloseBtnProps = {
+  isShown: boolean;
   setIsShown: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function CloseBtn({ setIsShown }: CloseBtnProps) {
+export default function CloseBtn({ isShown, setIsShown }: CloseBtnProps) {
   const closeMenuBtnVariants: Variants = {
     close: {
 
@@ -45,8 +46,7 @@ export default function CloseBtn({ setIsShown }: CloseBtnProps) {
       className="flex flex-col gap-2 items-center justify-center cursor-pointer"
       variants={closeMenuBtnVariants}
       initial="close"
-      animate="open"
-      exit="close"
+      animate={ isShown ? "open" : "close" }
       whileHover={{ scale: 1.1 }}
     >
       <motion.div

@@ -34,6 +34,7 @@ export default function Practice3() {
           'Use an SVG icon or image.',
           'Animate the icon to rotate indefinitely.'
         ]}
+        navLinkType='transformations'
         extraContentBelow={
           <motion.div className="practice-container">
             <motion.div

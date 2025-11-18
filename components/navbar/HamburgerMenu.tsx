@@ -53,7 +53,6 @@ export default function HamburgerMenu() {
       variants={parentVariants}
       initial="closed"
       animate={isMobileNavOpened ? "opened" : "closed"}
-      exit="closed"
       whileHover={{
         scale: 1.1,
       }}

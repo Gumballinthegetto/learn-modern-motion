@@ -63,6 +63,7 @@ export default function Practice6() {
             "Style the toast with Tailwind CSS.",
             "Use state to control the visibility of the toast and animate its entrance and exit.",
           ]}
+          navLinkType="transitions"
           extraContentBelow={
             <div className="relative practice-container px-6">
               <AnimatePresence>
@@ -81,6 +82,7 @@ export default function Practice6() {
                         <p>Toast got clicked!</p>
                       </div>
                       <CloseBtn
+                        isShown={true}
                         setIsShown={setIsOpen}
                       />
                     </div>

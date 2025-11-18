@@ -3,7 +3,8 @@
 import HamburgerMenu from "./HamburgerMenu";
 import Banana from "@/public/assets/icons/banana";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence, useScroll, useTransform, useSpring } from "motion/react";
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "motion/react";
+import { useState } from "react";
 import Underline from "../Underline";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
@@ -12,26 +13,34 @@ import { useMobileNavbar } from "@/provider/MobileNavbarProvider";
 export default function Navbar() {
   const { isMobileNavOpened, setIsMobileNavOpened, toggleMobileNav, links } = useMobileNavbar();
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const { scrollY } = useScroll();
-  // Smooth the scroll value with a spring, then map to color
-  const smoothedY = useSpring(scrollY, { stiffness: 120, damping: 26, mass: 1 });
-  const backgroundColor = useTransform(
-    smoothedY,
-    [0, 40],
-    ['rgba(0,0,0,0)', 'rgba(0,0,0,0.8)']
-  );
+
+  // Use useMotionValueEvent for better performance
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 40);
+  });
 
   return (
     <motion.div
-      style={{ backgroundColor }}
-      className="fixed left-0 right-0 top-0 w-full py-6 z-[99]">
+      className="fixed left-0 right-0 top-0 w-full py-6 z-[99]"
+      animate={{
+        backgroundColor: isScrolled ? 'rgba(0,0,0,0.8)' : 'rgba(0,0,0,0)',
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "easeInOut"
+      }}
+    >
       <nav className="relative">
         <div className="flex items-center justify-between relative w-[90%] mx-auto">
           <div className="flex items-center justify-start w-full">
             <Link
               onClick={() => setIsMobileNavOpened(false)}
-              href="/" className="flex items-center justify-center gap-2">
+              href="/" 
+              className="flex items-center justify-center gap-2"
+            >
               <Banana
                 width={22}
                 height={22}
@@ -66,12 +75,13 @@ export default function Navbar() {
                     )}
                   </Link>
                 </motion.li>
-                ))}
+              ))}
             </ul>
           </div>
         </div>
       </nav>
 
+      {/** Mobile Nav */}
       <AnimatePresence>
         {isMobileNavOpened &&
           <MobileNav

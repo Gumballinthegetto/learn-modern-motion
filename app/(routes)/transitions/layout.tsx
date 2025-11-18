@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import TransitionsNav from "@/app/ui/transitions/TransitionsNav";
 import { ReactNode } from "react";
+import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
+import { navigationConfig } from "@/config/navigation";
+import { SectionPagination } from "@/components/pagination/SectionPagination";
 
 export const metadata: Metadata = {
   title: "Transitions Practice",
@@ -18,9 +21,9 @@ export default function TransitionsLayout({
         <h1 className="text-xl font-semibold">Transitions</h1>
         <p className="text-base text-muted-foreground text-start py-4">Practice transition animations: duration, ease, delay, and transition types. Learn to create smooth and polished motion experiences.</p>
         <TransitionsNav />
-        <div>
+        <PaginationWrapper links={navigationConfig.transitions}>
           {children}
-        </div>
+        </PaginationWrapper>
       </div>
     </section>
   );

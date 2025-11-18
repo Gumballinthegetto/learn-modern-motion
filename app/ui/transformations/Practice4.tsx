@@ -28,6 +28,7 @@ export default function Practice4() {
           'Create a rectangle using tailwind CSS.',
           'On click, skew the rectangle and return to normal when clicked again.',
         ]}
+        navLinkType='transformations'
         extraContentBelow={
           <div className="practice-container">
             <motion.div

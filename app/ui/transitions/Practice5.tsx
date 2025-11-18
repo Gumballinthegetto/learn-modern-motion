@@ -53,6 +53,7 @@ export default function Practice5() {
             <>Use <code>motion.div</code> to animate the height of the content.</>,
             "Use Tailwind CSS for styling the titles and content.",
           ]}
+          navLinkType="transitions"
           extraContentBelow={
             <motion.div className="practice-container gap-10">
               <div className="relative flex flex-col items-center gap-4 justify-center">
