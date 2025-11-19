@@ -1,13 +1,9 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import { motion, useMotionValue, Variants } from "motion/react";
+import { AnimatePresence, motion, useMotionValue, Variants } from "motion/react";
 import Practice from "@/components/Practice";
 import { useState } from "react";
-
-type FadeComponentProps = {
-  isShown: boolean;
-};
 
 export default function Practice1() {
   const [show, setShow] = useState(false);
@@ -26,9 +22,18 @@ export default function Practice1() {
           ]}
           navLinkType="transitions"
           extraContentBelow={
-            <div className="practice-container">
-              <FadeComponent isShown={show} />
-              <button className="button" onClick={() => setShow((prevState) => !prevState)}>{ show ? "Hide" : "Show" }</button>
+            <div className="relative practice-container">
+              <AnimatePresence>
+                {show && (
+                  <FadeComponent />
+                )}
+              </AnimatePresence>
+              <button
+                className="button absolute bottom-[35%]"
+                onClick={() => setShow((prevState) => !prevState)}
+                >
+                  { show ? "Hide" : "Show" }
+              </button>
             </div>
           }
         />
@@ -37,7 +42,7 @@ export default function Practice1() {
   );
 }
 
-const FadeComponent = ({ isShown }: FadeComponentProps) => {
+const FadeComponent = () => {
   const backgroundColor = useMotionValue("");
 
   const containerVariants: Variants = {
@@ -56,11 +61,12 @@ const FadeComponent = ({ isShown }: FadeComponentProps) => {
     <motion.div
       variants={containerVariants}
       initial="hide"
-      animate={ isShown ? "show" : "hide" }
+      animate="show"
+      exit="hide"
       style={{
         backgroundColor,
       }}
-      className="w-[120px] h-[120px] rounded-lg shadow-sm"
+      className="absolute top-[20%] w-[120px] h-[120px] rounded-lg shadow-sm"
     />
   );
 };
