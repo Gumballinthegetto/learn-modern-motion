@@ -3,7 +3,6 @@ import TransitionsNav from "@/app/ui/transitions/TransitionsNav";
 import { ReactNode } from "react";
 import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";
-import { SectionPagination } from "@/components/pagination/SectionPagination";
 
 export const metadata: Metadata = {
   title: "Transitions Practice",
