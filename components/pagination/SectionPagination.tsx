@@ -45,8 +45,8 @@ export function SectionPagination({
       x: ["0%", "100%", "-100%", "0%"],
       opacity: [1, 0, 0, 1],
       transition: {
-        times: [0, 0.5, 0.51, 1]
-      }
+        times: [0, 0.49, 0.51, 1]
+      },
     },
     leave: {
       x: ["0%", "-100%", "100%", "0%"],
@@ -104,20 +104,21 @@ export function SectionPagination({
           setTimeout(() => setPrevState("rest"), 250);
         }}
       >
-        <motion.div
-          className="w-5 flex items-center justify-center"
-          variants={iconVariants}
-          initial="rest"
-          animate={prevState}
-          transition={{
-            type: "tween",
-            duration: 0.4,
-            times: [0, 0.49, 0.51, 1],
-            ease: [0.175, 0.885, 0.32, 1.1],
-          }}
-        >
-          <BackIcon className="min-w-[20px] min-h-[20px] text-white" />
-        </motion.div>
+        <div className="w-5 flex items-center justify-center overflow-hidden">
+          <motion.div
+            variants={iconVariants}
+            initial="rest"
+            animate={prevState}
+            transition={{
+              type: "tween",
+              duration: 0.4,
+              times: [0, 0.49, 0.51, 1],
+              ease: [0.175, 0.885, 0.32, 1.1],
+            }}
+          >
+            <BackIcon width={22} height={22} />
+          </motion.div>
+        </div>
         <motion.p
           variants={textPrevVariants}
           initial="rest"
@@ -163,20 +164,21 @@ export function SectionPagination({
         >
           Next
         </motion.p>
-        <motion.div
-          className="w-5 flex items-center justify-center overflow-hidden"
-          variants={iconVariants}
-          initial="rest"
-          animate={nextState}
-          transition={{
-            type: "tween",
-            duration: 0.4,
-            times: [0, 0.49, 0.51, 1],
-            ease: [0.175, 0.885, 0.32, 1.1],
-          }}
-        >
-          <NextIcon className="min-w-[20px] min-h-[20px]" />
-        </motion.div>
+        <div className="w-6 flex items-center justify-center overflow-hidden">
+          <motion.div
+            variants={iconVariants}
+            initial="rest"
+            animate={nextState}
+            transition={{
+              type: "tween",
+              duration: 0.4,
+              times: [0, 0.49, 0.51, 1],
+              ease: [0.175, 0.885, 0.32, 1.1],
+            }}
+          >
+            <NextIcon width={22} height={22} />
+          </motion.div>
+        </div>
       </motion.button>
     </div>
   );

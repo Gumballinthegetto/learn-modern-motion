@@ -4,6 +4,7 @@ import Practice from '@/components/Practice';
 import PopUpContainer from '@/components/PopUpContainer';
 import { motion, Variants } from 'motion/react';
 import { useState } from 'react';
+import { cn } from '@/utils/cn';
 
 export default function Practice2() {
   const [animate, setAnimate] = useState(false);
@@ -13,12 +14,10 @@ export default function Practice2() {
       y: 0,
     },
     animate: {
-      y: [0, '-100%', 0],
+      y: '-100%',
       transition: {
         ease: 'easeInOut',
         duration: .5,
-        repeat: 2,
-        repeatType: 'reverse',
       },
     },
   };
@@ -42,7 +41,15 @@ export default function Practice2() {
             className='w-[120px] h-[120px] rounded-full bg-accent'
             onAnimationComplete={() => setAnimate(false)}
           />
-          <button onClick={() => setAnimate(true)} className='button'>Animate</button>
+          <motion.button
+            onClick={() => setAnimate(true)}
+            className={cn(
+              'button',
+              animate ? 'cursor-not-allowed opacity-50' : '',
+            )}
+          >
+              Animate
+          </motion.button>
         </div>
        }
       />

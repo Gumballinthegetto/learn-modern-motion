@@ -38,7 +38,7 @@ export default function Navbar() {
           <div className="flex items-center justify-start w-full">
             <Link
               onClick={() => setIsMobileNavOpened(false)}
-              href="/" 
+              href="/"
               className="flex items-center justify-center gap-2"
             >
               <Banana

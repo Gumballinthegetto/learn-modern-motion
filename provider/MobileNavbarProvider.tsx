@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeScreenIcon, KeyframesDoubleIcon, TransformationIcon } from '@/public/assets/assets';
+import { ChangeScreenIcon, KeyframesIcon, TransformationIcon } from '@/public/assets/assets';
 import { createContext, useContext, useState, ReactNode } from 'react';
 
 export type LinksProps = {
@@ -24,7 +24,7 @@ export function MobileNavbarProvider({ children }: { children: ReactNode }) {
   const links: LinksProps[] = [
     { href: '/transformations', label: 'Transformations', icon: <TransformationIcon width={20} height={20} /> },
     { href: '/transitions', label: 'Transitions', icon: <ChangeScreenIcon width={20} height={20} /> },
-    { href: '/keyframes', label: 'Variants', icon: <KeyframesDoubleIcon width={20} height={20} /> },
+    { href: '/keyframes', label: 'Keyframes', icon: <KeyframesIcon width={20} height={20} /> },
   ];
 
   const toggleMobileNav = () => {
