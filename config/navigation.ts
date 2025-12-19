@@ -26,5 +26,9 @@ export const navigationConfig = {
   ],
   variants: [
     { href: '/variants/practice-1', label: 'Practice 1' },
+    { href: '/variants/practice-2', label: 'Practice 2' },
+    { href: '/variants/practice-3', label: 'Practice 3' },
+    { href: '/variants/practice-4', label: 'Practice 4' },
+    { href: '/variants/practice-5', label: 'Practice 5' },
   ],
 };

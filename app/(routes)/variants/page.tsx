@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Variants - Motion Practice",
-  description: "Practice Motion variants. Learn how to create declarative animations with predefined states and reusable animation patterns.",
+  description:
+    "Start your Motion variants journey here. Use this entry point to explore exercises that teach reusable animation states, expressive intent, and coordinated parent–child animations.",
 };
 
 export default function VariantsPage() {
-  return (
-    <div>
-      <h1 className="text-[2rem] font-bold">Variants Page</h1>
-    </div>
-  );
+  return redirect('/variants/practice-1');
 }
