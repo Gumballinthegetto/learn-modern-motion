@@ -13,12 +13,12 @@ const lexendDeca = Lexend_Deca({
 
 export const metadata: Metadata = {
   title: "Motion Practice - Interactive Motion Exercises",
-  description: "Practice Motion animations with hands-on exercises covering transformations, transitions, and variants. Master modern web animations.",
+  description: "Practice Motion animations with hands-on exercises covering transformations, transitions, variants, and more. Master modern web animations.",
   keywords: ["motion", "animations", "practice", "exercises", "react", "motion design", "UI animations"],
   authors: [{ name: "Nanas Corp." }],
   openGraph: {
     title: "Motion Practice - Interactive Motion Exercises",
-    description: "Practice Motion animations with hands-on exercises covering transformations, transitions, and variants.",
+    description: "Practice Motion animations with hands-on exercises covering transformations, transitions, variants, and more.",
     type: "website",
   },
 };

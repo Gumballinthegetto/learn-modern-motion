@@ -31,4 +31,12 @@ export const navigationConfig = {
     { href: '/variants/practice-4', label: 'Practice 4' },
     { href: '/variants/practice-5', label: 'Practice 5' },
   ],
+  gestures: [
+    { href: '/gestures/practice-1', label: 'Practice 1' },
+    { href: '/gestures/practice-2', label: 'Practice 2' },
+    { href: '/gestures/practice-3', label: 'Practice 3' },
+    { href: '/gestures/practice-4', label: 'Practice 4' },
+    { href: '/gestures/practice-5', label: 'Practice 5' },
+    { href: '/gestures/practice-6', label: 'Practice 6' },
+  ],
 };
