@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Practice5 from "@/app/ui/transformations/Practice5";
 
 export const metadata: Metadata = {
-  title: "Transformations Practice 5 - Motion Practice",
+  title: "Transformations Practice 5 - Combined Transformations",
   description: "Expert-level transformation animations with Motion. Master complex animation sequences and performance optimization.",
 };
 

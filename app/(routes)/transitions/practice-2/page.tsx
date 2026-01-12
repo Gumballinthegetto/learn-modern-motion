@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Practice2 from "@/app/ui/transitions/Practice2";
 
 export const metadata: Metadata = {
-  title: "Transitions Practice 2 - Motion Practice",
+  title: "Transitions Practice 2 - Slide In from the Right",
   description: "Advanced transition practice with Motion. Explore complex timing functions and easing curves.",
 };
 

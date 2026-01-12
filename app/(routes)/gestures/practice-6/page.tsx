@@ -2,7 +2,7 @@ import Practice6 from "@/app/ui/gestures/Practice6";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gesture-Based Image Gallery - Motion Practice",
+  title: "Gestures Practice 6 - Gesture-Based Image Gallery",
   description:
     "Build a vertical image gallery with swipe navigation, gesture controls, and smooth transitions between photos.",
 };

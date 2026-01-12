@@ -2,7 +2,7 @@ import Practice3 from "@/app/ui/gestures/Practice3";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rotate on Drag - Motion Practice",
+  title: "Gestures Practice 3 - Rotate on Drag",
   description:
     "Combine drag events with rotation calculations to create dynamic, interactive elements that respond to user movement.",
 };
