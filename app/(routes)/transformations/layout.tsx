@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ReactNode } from "react";
-import TransformationsNav from "../../ui/transformations/TransformationsNav";
+import TransformationsNav from "./TransformationsNav";
 import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";
 

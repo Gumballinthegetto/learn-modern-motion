@@ -2,8 +2,7 @@
 
 import { navigationConfig } from "@/config/navigation";
 import { SectionPagination } from "./SectionPagination";
-
-type NavigationKey = keyof typeof navigationConfig;
+import { NavigationKey } from "@/types/types";
 
 interface PaginationWrapperProps {
   variant?: NavigationKey;

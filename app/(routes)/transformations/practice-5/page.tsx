@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Practice5 from "@/app/ui/transformations/Practice5";
+import Practice5 from "./Practice5";
 
 export const metadata: Metadata = {
   title: "Transformations Practice 5 - Combined Transformations",

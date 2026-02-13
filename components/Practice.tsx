@@ -2,9 +2,7 @@ import { PinIcon2 } from "@/public/assets/assets";
 import { ReactNode } from "react";
 import { cn } from "@/utils/cn";
 import { SectionPagination } from "./pagination/SectionPagination";
-import { navigationConfig } from "@/config/navigation";
-
-type NavigationKey = keyof typeof navigationConfig;
+import { NavigationKey } from "@/types/types";
 
 interface PracticeProps {
   title: string;
@@ -22,7 +20,7 @@ export default function Practice({ title, objective, instructions, extraContentB
         'relative flex flex-col items-start justify-center w-full pt-2',
         "md:flex md:flex-row md:gap-10 md:min-h-[62vh]",
         className,
-    )}>
+      )}>
       <div className='flex flex-col items-start justify-center w-full pb-2'>
         <h1 className='text-[1.3rem] md:text-[1.6rem] font-medium pb-3'>{title}</h1>
         <div className='flex items-center justify-between w-full gap-4 rounded-lg border px-4 py-4'>

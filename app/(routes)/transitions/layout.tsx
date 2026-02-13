@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TransitionsNav from "@/app/ui/transitions/TransitionsNav";
+import TransitionsNav from "./TransitionsNav";
 import { ReactNode } from "react";
 import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";

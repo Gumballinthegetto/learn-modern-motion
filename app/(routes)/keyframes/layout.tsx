@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
-import KeyframesNav from "@/app/ui/keyframes/KeyframesNav";
+import KeyframesNav from "./KeyframesNav";
 import { navigationConfig } from "@/config/navigation";
 
 export const metadata: Metadata = {

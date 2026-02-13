@@ -39,4 +39,12 @@ export const navigationConfig = {
     { href: '/gestures/practice-5', label: 'Practice 5' },
     { href: '/gestures/practice-6', label: 'Practice 6' },
   ],
+  staggers: [
+    { href: '/staggers/practice-1', label: 'Practice 1' },
+    { href: '/staggers/practice-2', label: 'Practice 2' },
+    { href: '/staggers/practice-3', label: 'Practice 3' },
+    { href: '/staggers/practice-4', label: 'Practice 4' },
+    { href: '/staggers/practice-5', label: 'Practice 5' },
+    { href: '/staggers/practice-6', label: 'Practice 6' },
+  ],
 };

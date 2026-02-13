@@ -4,15 +4,9 @@ import { navigationConfig } from "@/config/navigation";
 import { useSectionPagination } from "@/libs/hooks/useSectionPagination";
 import { BackIcon, NextIcon } from "@/public/assets/assets";
 import { cn } from "@/utils/cn";
+import { NavLink, NavigationKey } from "@/types/types";
 import { motion, Variants } from 'motion/react';
 import { useState } from "react";
-
-interface NavLink {
-  href: string;
-  label: string;
-}
-
-type NavigationKey = keyof typeof navigationConfig;
 
 interface SectionPaginationProps {
   links?: NavLink[];
@@ -26,7 +20,7 @@ export function SectionPagination({
   className = "",
 }: SectionPaginationProps) {
   const resolvedLinks = links ?? navigationConfig[variant] ?? [];
-  const  { goToNext, goToPrev, hasNext, hasPrev } = useSectionPagination(resolvedLinks);
+  const { goToNext, goToPrev, hasNext, hasPrev } = useSectionPagination(resolvedLinks);
   const [prevState, setPrevState] = useState<"rest" | "hover" | "leave">("rest");
   const [nextState, setNextState] = useState<"rest" | "hover" | "leave">("rest");
 

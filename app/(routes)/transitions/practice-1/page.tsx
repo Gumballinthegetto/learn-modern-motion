@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Practice1 from "@/app/ui/transitions/Practice1";
+import Practice1 from "./Practice1";
 
 export const metadata: Metadata = {
   title: "Transitions Practice 1 - Simple Fade In/Out Animation",

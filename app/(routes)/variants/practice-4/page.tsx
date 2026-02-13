@@ -1,4 +1,4 @@
-import Practice4 from "@/app/ui/variants/Practice4";
+import Practice4 from "./Practice4";
 import { Metadata } from "next";
 
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Practice2 from "@/app/ui/keyframes/Practice2";
+import Practice2 from "./Practice2";
 
 export const metadata: Metadata = {
   title: "Keyframes Practice 2 - Pulsating Button",
