@@ -1,4 +1,4 @@
-import Practice1 from "@/app/ui/variants/Practice1";
+import Practice1 from "./Practice1";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

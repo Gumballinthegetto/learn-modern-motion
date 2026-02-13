@@ -1,4 +1,4 @@
-import Practice3 from "@/app/ui/gestures/Practice3";
+import Practice3 from "./Practice3";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -14,7 +14,7 @@ export default function MobileNav({ links, setIsMobileNavOpened }: MobileNavProp
     close: {
       transition: {
         when: "afterChildren",
-        delay: .3,
+        delay: .5,
       }
     },
     open: {
@@ -28,7 +28,7 @@ export default function MobileNav({ links, setIsMobileNavOpened }: MobileNavProp
     close: {
       opacity: 0,
       transition: {
-        delay: .4,
+        delay: .6,
       }
     },
     open: {

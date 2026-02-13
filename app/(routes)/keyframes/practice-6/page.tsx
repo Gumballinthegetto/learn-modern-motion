@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Practice6 from "@/app/ui/keyframes/Practice6";
+import Practice6 from "./Practice6";
 
 export const metadata: Metadata = {
   title: "Keyframes Practice 6 - Wave Effect",

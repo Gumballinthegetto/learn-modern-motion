@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Practice7 from "@/app/ui/keyframes/Practice7";
+import Practice7 from "./Practice7";
 
 export const metadata: Metadata = {
   title: "Keyframes Practice 7 - Background Color Loop",

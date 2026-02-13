@@ -1,11 +1,7 @@
 'use client';
 
 import { usePathname, useRouter } from "next/navigation";
-
-interface NavLink {
-  href: string;
-  label: string;
-}
+import { NavLink } from "@/types/types";
 
 export function useSectionPagination(links: NavLink[]) {
   const pathname = usePathname();
@@ -23,7 +19,7 @@ export function useSectionPagination(links: NavLink[]) {
   };
 
   const goToPrev = () => {
-    if (currentIndex  > 0) {
+    if (currentIndex > 0) {
       router.push(links[currentIndex - 1].href);
     }
   };

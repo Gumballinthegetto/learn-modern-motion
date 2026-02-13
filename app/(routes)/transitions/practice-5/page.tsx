@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Practice5 from "@/app/ui/transitions/Practice5";
+import Practice5 from "./Practice5";
 
 export const metadata: Metadata = {
   title: "Transitions Practice 5 - Card Exit/Enter",

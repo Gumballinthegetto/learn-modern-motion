@@ -1,4 +1,4 @@
-import Practice6 from "@/app/ui/transformations/Practice6";
+import Practice6 from "./Practice6";
 
 export const metadata = {
   title: "Transformations Practice 6 - Sequential Transformations",

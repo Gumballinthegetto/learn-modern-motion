@@ -3,11 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Underline from "@/components/Underline";
-
-interface NavLink {
-  href: string;
-  label: string;
-}
+import { NavLink } from "@/types/types";
 
 interface SectionNavProps {
   links: NavLink[];

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { ReactNode } from "react";
-import GesturesNav from "@/app/ui/gestures/GesturesNav";
+import GesturesNav from "./GesturesNav";
 import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";
 

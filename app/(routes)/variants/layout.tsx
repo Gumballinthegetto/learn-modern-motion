@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";
-import VariantsNav from "@/app/ui/variants/VariantsNav";
+import VariantsNav from "./VariantsNav";
 
 export const metadata: Metadata = {
   title: "Variants Practice",
