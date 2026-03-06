@@ -1,35 +1,60 @@
+# Learn Modern Motion v2
 
-Practice projects exploring Motion (Framer Motion v2) in Next.js 15:
+A comprehensive practice project for exploring modern web animations using **Motion (formerly Framer Motion) v12** and **Next.js 16**.
 
-- Transformations, transitions, variants, stagger, scroll, and continuous animations
-- Reusable `Practice` component and `cn` utility for class merging
-- Scroll-reactive navbar with color and blur
+This project serves as a structured learning path for mastering complex animations, transitions, and interactive UI components.
 
-Exercises inspired by [@huxnwebdev](https://www.youtube.com/@huxnwebdev).
+## ✨ Features & Categories
 
-## Tech
+The project is organized into several key animation categories, each containing multiple practical examples:
 
-- Next.js 15, React 19
-- Motion (Framer Motion v2 APIs via `motion/react`)
-- Tailwind CSS v4
-- TypeScript
+- **🖱️ Gestures**: Interactive animations triggered by hover, tap, pan, and drag.
+- **🎞️ Keyframes**: Multi-stage animations with complex sequences.
+- **🎭 Variants**: Organized animation states for cleaner, reusable code and staggered children.
+- **🌊 Staggers**: Orchestrating animations for lists and groups of elements.
+- **🔄 Transformations**: Position, scale, rotation, and skew animations.
+- **⚡ Transitions**: Fine-tuning easing, duration, and spring physics.
 
-## Dev
+## 🛠️ Tech Stack
 
-pnpm i
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Library**: [Motion v12](https://motion.dev/) (formerly Framer Motion)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Icons**: [@hugeicons/react](https://hugeicons.com/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js installed
+- `pnpm` (recommended)
+
+### Installation
+
+```bash
+pnpm install
+```
+
+### Development
+
+```bash
 pnpm dev
+```
 
-## Structure
+The app will be available at `http://localhost:3000`.
 
-- practice/ — your practice app
-- learn-modern-motion/ — examples and references
-- practice/utils/cn.ts — clsx + tailwind-merge
-- practice/components/ — reusable UI (Navbar, Footer, Practice, etc.)
+## 📂 Project Structure
 
-## Credits
+- `app/(routes)/` - Contains the categorized animation exercise pages.
+- `components/` - Reusable UI components including the `Practice` wrapper and global `Navbar/Footer`.
+- `utils/` - Utility functions like the Tailwind class merger (`cn`).
+- `libs/` - External library configurations and wrappers.
 
-Exercises inspired by [@huxnwebdev](https://www.youtube.com/@huxnwebdev).
+## 📜 Credits
 
-## License
+Exercises and concepts inspired by [@huxnwebdev](https://www.youtube.com/@huxnwebdev).
+
+## ⚖️ License
 
 MIT

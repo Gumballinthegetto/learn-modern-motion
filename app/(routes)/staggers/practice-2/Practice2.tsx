@@ -25,9 +25,6 @@ export default function Practice2({ images }: Practice2Props) {
         navLinkType="staggers"
         extraContentBelow={
           <div className="practice-container">
-            <div>
-              
-            </div>
             <div className="flex items-center justify-between">
               
             </div>
