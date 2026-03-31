@@ -45,6 +45,5 @@ export const navigationConfig = {
     { href: '/staggers/practice-3', label: 'Practice 3' },
     { href: '/staggers/practice-4', label: 'Practice 4' },
     { href: '/staggers/practice-5', label: 'Practice 5' },
-    { href: '/staggers/practice-6', label: 'Practice 6' },
   ],
 };

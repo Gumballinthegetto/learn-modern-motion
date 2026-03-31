@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import StaggersNav from "./StaggersNav";
 import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";
 import { ReactNode } from "react";
+
+export const metadata: Metadata = {
+  title: "Staggers Practice",
+  description: "Practice Motion staggers: orchestrate sequential animations across multiple elements, create cascading effects with staggerChildren and delayChildren, and build coordinated transitions.",
+};
 
 export default function StaggersLayout({
   children

@@ -104,7 +104,7 @@ export default function Practice6({ images }: Practice6Props) {
                   <div className="relative w-full h-[400px]"> {/* Container for Image */}
                     <Image
                       src={items[currentIndex].urls.regular}
-                      alt={items[currentIndex].alt_description || 'Gallery image'}
+                      alt={items[currentIndex].alt_description || `Gallery Image ${currentIndex + 1}`}
                       fill
                       className="object-cover rounded-lg"
                       sizes="(max-width: 768px) 100vw, 400px"

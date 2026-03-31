@@ -3,13 +3,13 @@ import { getImages } from "@/libs/unsplash";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gestures Practice 1 - Swipeable Cards",
+  title: "Staggers Practice 2 - Image Gallery",
   description:
-    "Learn to build swipeable card interfaces with drag gestures, constraints, and smooth animations for next/previous navigation.",
+    "Master staggering effects in image galleries, creating smooth entrance animations as visual content loads into the interface.",
 };
 
 export default async function StaggersPractice2() {
-  const images = await getImages(3);
+  const images = await getImages(10);
 
   return (
     <Practice2

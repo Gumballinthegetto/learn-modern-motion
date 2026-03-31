@@ -2,9 +2,9 @@ import Practice3 from "./Practice3";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gestures Practice 1 - Swipeable Cards",
+  title: "Staggers Practice 3 - Animated Buttons",
   description:
-    "Learn to build swipeable card interfaces with drag gestures, constraints, and smooth animations for next/previous navigation.",
+    "Practice using stagger effects to animate interactive button groups, enhancing the tactile feel of UI components.",
 };
 export default function StaggersPractice3() {
   return <Practice3 />;
