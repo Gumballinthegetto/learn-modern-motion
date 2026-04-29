@@ -19,8 +19,8 @@ export default function Practice5() {
           <div ref={containerRef} className="practice-container">
             <motion.div
               className="bg-accent rounded-lg w-[120px] h-[120px]"
-              whileInView={ opacity: 1, y: 0 }
-              initial={ opacity: 0, y: 50 }
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
             />
           </div>  
         }
