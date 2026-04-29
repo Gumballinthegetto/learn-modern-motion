@@ -53,4 +53,11 @@ export const navigationConfig = {
     { href: '/motion-value/practice-4', label: 'Practice 4' },
     { href: '/motion-value/practice-5', label: 'Practice 5' },
   ],
+  whileInView: [
+    { href: '/while-in-view/practice-1', label: 'Practice 1' },
+    { href: '/while-in-view/practice-2', label: 'Practice 2' },
+    { href: '/while-in-view/practice-3', label: 'Practice 3' },
+    { href: '/while-in-view/practice-4', label: 'Practice 4' },
+    { href: '/while-in-view/practice-5', label: 'Practice 5' },
+  ],
 };
