@@ -28,7 +28,7 @@ export default function MobileNav({ links, setIsMobileNavOpened }: MobileNavProp
     close: {
       opacity: 0,
       transition: {
-        delay: .6,
+        delay: .8,
       }
     },
     open: {
@@ -62,7 +62,7 @@ export default function MobileNav({ links, setIsMobileNavOpened }: MobileNavProp
 
   return (
     <div
-      className="fixed inset-0 z-[98] sm:hidden"
+      className="fixed inset-0 z-98 lg:hidden"
     >
       <motion.div
         variants={overlayVariants}
@@ -80,7 +80,6 @@ export default function MobileNav({ links, setIsMobileNavOpened }: MobileNavProp
         animate="open"
         exit="close"
         className="absolute left-0 right-0 bottom-0 top-16 origin-top"
-        transition={{ duration: .3, ease: 'easeInOut' }}
       >
         <motion.ul
           variants={listVariants}
@@ -88,20 +87,20 @@ export default function MobileNav({ links, setIsMobileNavOpened }: MobileNavProp
         >
           {links.map(({ href, label, icon }) => (
             <motion.li
-                variants={itemsVariants}
-                key={href}
-                className="w-full border-b py-6 px-8"
-              >
-              <Link
+              variants={itemsVariants}
+              key={href}
+              className="py-6 px-8 cursor-pointer w-full"
+              whileHover={{
+                color: '#ffe66d',
+                scaleX: 1.05,
+                x: 20,
+              }}
+            >
+              <Link 
                 onClick={setIsMobileNavOpened} href={href}
               >
                 <motion.div
                   className="flex items-center gap-2"
-                  whileHover={{
-                    color: '#ffe66d',
-                    scaleX: 1.05,
-                    x: 20,
-                  }}
                 >
                   {icon}
                   <span>{label}</span>

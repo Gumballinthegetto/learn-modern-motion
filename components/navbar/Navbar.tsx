@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <motion.div
-      className="fixed left-0 right-0 top-0 w-full py-6 z-[99]"
+      className="fixed left-0 right-0 top-0 w-full py-6 z-99"
       animate={{
         backgroundColor: isScrolled ? 'rgba(0,0,0,0.8)' : 'rgba(0,0,0,0)',
       }}
@@ -34,8 +34,8 @@ export default function Navbar() {
       }}
     >
       <nav className="relative">
-        <div className="flex items-center justify-between relative w-[90%] mx-auto">
-          <div className="flex items-center justify-start w-full">
+        <div className="flex items-center justify-between relative px-8 lg:px-0 lg:w-[95%] xl:w-[90%] mx-auto">
+          <div className="flex items-center justify-start">
             <Link
               onClick={() => setIsMobileNavOpened(false)}
               href="/"
@@ -50,13 +50,13 @@ export default function Navbar() {
             </Link>
             <button
               onClick={toggleMobileNav}
-              className="absolute right-0 z-[99] sm:hidden"
+              className="absolute right-8 z-99 lg:hidden"
             >
               <HamburgerMenu />
             </button>
           </div>
-          <div className="hidden sm:flex sm:justify-end sm:w-full">
-            <ul className="flex items-center justify-center gap-4">
+          <div className="hidden lg:flex lg:justify-end">
+            <ul className="flex items-center justify-center lg:gap-2 xl:gap-4">
               {links.map(({ href, label }) => (
                 <motion.li
                   key={href}
@@ -69,7 +69,7 @@ export default function Navbar() {
                     className="relative flex flex-col py-1"
                     href={href}
                   >
-                    <span>{label}</span>
+                    <p className="text-base">{label}</p>
                     {(pathname === href || pathname.startsWith(`${href}/`)) && (
                       <Underline />
                     )}

@@ -47,7 +47,8 @@ export default function Practice3() {
             <motion.div
               variants={containerVariants}
               initial="initial"
-              animate="animate"
+              whileInView="animate"
+              viewport={{ once: true }}
               className="flex flex-col gap-6"
             >
               {Array.from({ length: 4 }).map((_, index) => (
