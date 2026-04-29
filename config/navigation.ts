@@ -46,4 +46,11 @@ export const navigationConfig = {
     { href: '/staggers/practice-4', label: 'Practice 4' },
     { href: '/staggers/practice-5', label: 'Practice 5' },
   ],
+  motionValue: [
+    { href: '/motion-value/practice-1', label: 'Practice 1' },
+    { href: '/motion-value/practice-2', label: 'Practice 2' },
+    { href: '/motion-value/practice-3', label: 'Practice 3' },
+    { href: '/motion-value/practice-4', label: 'Practice 4' },
+    { href: '/motion-value/practice-5', label: 'Practice 5' },
+  ],
 };
