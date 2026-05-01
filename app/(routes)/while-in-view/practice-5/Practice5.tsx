@@ -12,8 +12,8 @@ export default function Practice5() {
     <PopUpContainer>
       <Practice
         title="Practice 5"
-        objective="Learn whileInView."
-        instructions=['Add your practice instructions here.']
+        objective="Coordinate multiple elements entering the view."
+        instructions=['Apply `whileInView` to multiple child elements.', 'Use transition delays to create a sequential entrance.', 'Ensure the container is large enough to require scrolling.']
         navLinkType="whileInView"
         extraContentBelow={
           <div ref={containerRef} className="practice-container">

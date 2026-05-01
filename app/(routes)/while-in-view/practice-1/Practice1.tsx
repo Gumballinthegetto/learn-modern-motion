@@ -12,8 +12,8 @@ export default function Practice1() {
     <PopUpContainer>
       <Practice
         title="Practice 1"
-        objective="Learn whileInView."
-        instructions=['Add your practice instructions here.']
+        objective="Animate an element as it enters the viewport."
+        instructions=['Add the `whileInView` prop to a `motion.div`.', 'Define an `initial` state that is hidden (e.g., `opacity: 0`).', 'Set the `whileInView` state to be visible (e.g., `opacity: 1`).']
         navLinkType="whileInView"
         extraContentBelow={
           <div ref={containerRef} className="practice-container">

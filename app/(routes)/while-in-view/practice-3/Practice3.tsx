@@ -12,8 +12,8 @@ export default function Practice3() {
     <PopUpContainer>
       <Practice
         title="Practice 3"
-        objective="Learn whileInView."
-        instructions=['Add your practice instructions here.']
+        objective="Create a 'once-only' viewport animation."
+        instructions=['Add `once: true` to the `viewport` configuration.', 'Verify that the animation only runs the first time the element enters view.', "Scroll up and down to ensure it doesn't repeat."]
         navLinkType="whileInView"
         extraContentBelow={
           <div ref={containerRef} className="practice-container">

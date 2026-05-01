@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeScreenIcon, GesturesIcon, KeyframesIcon, MotionValueIcon, StaggersIcon, TransformationIcon, VariantsIcon } from '@/public/assets/assets';
+import { ChangeScreenIcon, GesturesIcon, KeyframesIcon, MotionValueIcon, StaggersIcon, TransformationIcon, VariantsIcon, WhileInViewIcon } from '@/public/assets/assets';
 import { createContext, useContext, useState, ReactNode } from 'react';
 
 export type LinksProps = {
@@ -29,6 +29,7 @@ export function MobileNavbarProvider({ children }: { children: ReactNode }) {
     { href: '/gestures', label: 'Gestures', icon: <GesturesIcon width={20} height={20} /> },
     { href: '/staggers', label: 'Staggers', icon: <StaggersIcon width={20} height={20} /> },
     { href: '/motion-value', label: 'Motion Values', icon: <MotionValueIcon width={20} height={20} /> },
+    { href: '/while-in-view', label: 'While In View', icon: <WhileInViewIcon width={20} height={20} /> },
   ];
 
   const toggleMobileNav = () => {
