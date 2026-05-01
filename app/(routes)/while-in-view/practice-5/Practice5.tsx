@@ -13,7 +13,11 @@ export default function Practice5() {
       <Practice
         title="Practice 5"
         objective="Coordinate multiple elements entering the view."
-        instructions=['Apply `whileInView` to multiple child elements.', 'Use transition delays to create a sequential entrance.', 'Ensure the container is large enough to require scrolling.']
+        instructions={[
+          "Apply `whileInView` to multiple child elements.",
+          "Use transition delays to create a sequential entrance.",
+          "Ensure the container is large enough to require scrolling.",
+        ]}
         navLinkType="whileInView"
         extraContentBelow={
           <div ref={containerRef} className="practice-container">

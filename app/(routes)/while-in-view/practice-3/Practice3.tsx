@@ -13,7 +13,11 @@ export default function Practice3() {
       <Practice
         title="Practice 3"
         objective="Create a 'once-only' viewport animation."
-        instructions=['Add `once: true` to the `viewport` configuration.', 'Verify that the animation only runs the first time the element enters view.', "Scroll up and down to ensure it doesn't repeat."]
+        instructions={[
+          "Add `once: true` to the `viewport` configuration.",
+          "Verify that the animation only runs the first time the element enters view.",
+          "Scroll up and down to ensure it doesn't repeat.",
+        ]}
         navLinkType="whileInView"
         extraContentBelow={
           <div ref={containerRef} className="practice-container">

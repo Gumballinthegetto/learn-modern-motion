@@ -13,7 +13,11 @@ export default function Practice4() {
       <Practice
         title="Practice 4"
         objective="Use threshold to control trigger points."
-        instructions=['Set `amount` (threshold) in the `viewport` prop (e.g., `0.5`).', 'The animation should only start when 50% of the element is visible.', 'Experiment with different values from 0 to 1.']
+        instructions={[
+          "Set `amount` (threshold) in the `viewport` prop (e.g., `0.5`).",
+          "The animation should only start when 50% of the element is visible.",
+          "Experiment with different values from 0 to 1.",
+        ]}
         navLinkType="whileInView"
         extraContentBelow={
           <div ref={containerRef} className="practice-container">
