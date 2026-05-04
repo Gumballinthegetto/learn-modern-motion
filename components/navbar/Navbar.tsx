@@ -60,10 +60,13 @@ export default function Navbar() {
               {links.map(({ href, label }) => (
                 <motion.li
                   key={href}
+                  initial={{ color: '#ffffff', y: 0 }}
+                  animate={{ y: 0 }}
                   whileHover={(pathname !== href && !pathname.startsWith(`${href}/`)) ? {
                     color: '#ffe66d',
                     y: -2,
-                  } : undefined}
+                  } : {}}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   <Link
                     className="relative flex flex-col py-1"

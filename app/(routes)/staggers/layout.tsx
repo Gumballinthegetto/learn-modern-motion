@@ -5,8 +5,8 @@ import { navigationConfig } from "@/config/navigation";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Staggers Practice",
-  description: "Practice Motion staggers: orchestrate sequential animations across multiple elements, create cascading effects with staggerChildren and delayChildren, and build coordinated transitions.",
+  title: "Orchestrated Sequences | The Nanas Lab",
+  description: "Orchestrating sequential animations across multiple elements. Creating cascading effects with complex child propagation and timing.",
 };
 
 export default function StaggersLayout({
@@ -15,11 +15,11 @@ export default function StaggersLayout({
   children: ReactNode;
 }) {
   return (
-    <section className="min-h-screen px-8 pt-18">
+    <section className="flex-1 px-8 pt-18">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-xl font-semibold">Staggers</h1>
+        <h1 className="text-xl font-semibold">Orchestrated Sequences</h1>
         <p className="text-base text-muted-foreground text-start py-4">
-          Practice Motion staggers: orchestrate sequential animations across multiple elements; create cascading effects with staggerChildren and delayChildren; and build coordinated transitions that bring interfaces to life with choreographed timing.
+          The art of rhythmic motion. This laboratory examines how animations propagate through groups of elements, creating cascading effects and coordinated transitions through choreographed timing.
         </p>
         <StaggersNav />
         <PaginationWrapper links={navigationConfig.staggers}>

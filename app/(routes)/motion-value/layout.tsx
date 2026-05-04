@@ -5,8 +5,8 @@ import { navigationConfig } from "@/config/navigation";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Motion Values Practice",
-  description: "Learn to use MotionValues (useMotionValue, useTransform, useScroll) for advanced, performant animations that react to state or scroll position.",
+  title: "Dynamic States | The Nanas Lab",
+  description: "Mastering low-level animation controls that update without re-rendering. Linking values and tracking progress for high-performance interactions.",
 };
 
 export default function MotionValueLayout({
@@ -15,11 +15,11 @@ export default function MotionValueLayout({
   children: ReactNode;
 }) {
   return (
-    <section className="min-h-screen px-8 pt-18">
+    <section className="flex-1 px-8 pt-18">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-xl font-semibold">Motion Values</h1>
+        <h1 className="text-xl font-semibold">Dynamic States</h1>
         <p className="text-base text-muted-foreground text-start py-4">
-          Practice Motion Values: master low-level animation controls that update without re-rendering components. Learn to link values with useTransform, track scroll progress with useScroll, and create reactive, high-performance interactions.
+          The heartbeat of high-performance animation. This laboratory investigates MotionValues—low-level controls that react to state and scroll position without the overhead of component re-renders.
         </p>
         <MotionValueNav />
         <PaginationWrapper links={navigationConfig.motionValue}>

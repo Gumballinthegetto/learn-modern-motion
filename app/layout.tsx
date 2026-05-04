@@ -12,13 +12,13 @@ const lexendDeca = Lexend_Deca({
 });
 
 export const metadata: Metadata = {
-  title: "Motion Practice - Interactive Motion Exercises",
-  description: "Practice Motion animations with hands-on exercises covering transformations, transitions, variants, and more. Master modern web animations.",
-  keywords: ["motion", "animations", "practice", "exercises", "react", "motion design", "UI animations"],
+  title: "The Nanas Lab | Implementation-First Motion Library",
+  description: "A specialized laboratory by Nanas Corp exploring advanced Motion v12 implementations and modern web animation patterns.",
+  keywords: ["motion", "animations", "nanas lab", "nanas corp", "react", "motion design", "UI animations", "implementation"],
   authors: [{ name: "Nanas Corp." }],
   openGraph: {
-    title: "Motion Practice - Interactive Motion Exercises",
-    description: "Practice Motion animations with hands-on exercises covering transformations, transitions, variants, and more.",
+    title: "The Nanas Lab | Implementation-First Motion Library",
+    description: "Exploring the depths of Motion v12 and modern web animation patterns through precision-engineered implementations.",
     type: "website",
   },
 };
@@ -34,12 +34,12 @@ export default function RootLayout({
         className={`${lexendDeca.variable} antialiased`}
       >
         <MobileNavbarProvider>
-          <div className="relative min-h-screen w-full">
+          <div className="relative min-h-screen w-full flex flex-col overflow-x-hidden">
             <BackgroundGrid />
             <header>
               <Navbar />
             </header>
-            <main className="relative z-10">
+            <main className="relative z-10 flex-1 flex flex-col">
               {children}
             </main>
             <Footer />

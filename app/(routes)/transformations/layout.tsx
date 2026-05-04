@@ -5,8 +5,8 @@ import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";
 
 export const metadata: Metadata = {
-  title: "Transformations Practice",
-  description: "Practice foundational transform animations with Motion. Learn translate, scale, rotate, skew, and transform-origin properties.",
+  title: "Spatial Geometry | The Nanas Lab",
+  description: "Analyzing foundational transform properties. Precision manipulation of translation, scale, rotation, and skew for structural motion.",
 };
 
 export default function TransformationsLayout({
@@ -15,10 +15,10 @@ export default function TransformationsLayout({
   children: ReactNode;
 }) {
   return (
-    <section className="min-h-screen px-8 pt-18">
+    <section className="flex-1 px-8 pt-18">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-xl font-semibold">Transformations</h1>
-        <p className="text-base text-muted-foreground text-start py-4">Practice foundational transforms: translate, scale, rotate, skew, and transform-origin. Each exercise demonstrates common motion patterns and interaction hooks.</p>
+        <h1 className="text-xl font-semibold">Spatial Geometry</h1>
+        <p className="text-base text-muted-foreground text-start py-4">The mathematics of visual change. This laboratory explores the manipulation of spatial properties—translation, scale, rotation, and origin—to define the structural foundation of movement.</p>
         <TransformationsNav />
         <PaginationWrapper links={navigationConfig.transformations}>
           {children}

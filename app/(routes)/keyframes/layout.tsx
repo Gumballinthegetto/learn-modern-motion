@@ -5,9 +5,9 @@ import KeyframesNav from "./KeyframesNav";
 import { navigationConfig } from "@/config/navigation";
 
 export const metadata: Metadata = {
-  title: "Keyframes Practice",
+  title: "Sequential Logic | The Nanas Lab",
   description:
-    "Practice Motion keyframes: choreograph multi-step states, layer offsets, and shape expressive motion beats for polished, story-driven interactions.",
+    "Choreographing multi-step states and temporal offsets. Sculpting expressive motion beats for complex, story-driven interactions.",
 };
 
 export default function KeyframesLayout({
@@ -16,11 +16,11 @@ export default function KeyframesLayout({
   children: ReactNode
 }) {
   return (
-    <section className="min-h-screen px-8 pt-18">
+    <section className="flex-1 px-8 pt-18">
     <div className="max-w-5xl mx-auto">
-      <h1 className="text-xl font-semibold">Keyframes</h1>
+      <h1 className="text-xl font-semibold">Sequential Logic</h1>
       <p className="text-base text-muted-foreground text-start py-4">
-          Practice keyframe animations: choreograph multi-step states, layer offsets, and sculpt expressive motion beats for polished, story-driven interactions.
+        Choreographing time and state. This laboratory explores the structural logic of multi-step animations, layering temporal offsets to sculpt expressive motion beats and story-driven interactions.
       </p>
       <KeyframesNav />
       <PaginationWrapper links={navigationConfig.keyframes}>

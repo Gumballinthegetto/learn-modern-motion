@@ -5,9 +5,9 @@ import { navigationConfig } from "@/config/navigation";
 import VariantsNav from "./VariantsNav";
 
 export const metadata: Metadata = {
-  title: "Variants Practice",
+  title: "State Architecture | The Nanas Lab",
   description:
-    "Practice Motion variants. Learn how to define reusable animation states, coordinate parent–child animations, and orchestrate complex interface flows.",
+    "Organizing reusable animation logic and declarative states. Investigating parent-child coordination and complex interface flows.",
 };
 
 export default function VariantsLayout({
@@ -16,11 +16,11 @@ export default function VariantsLayout({
   children: ReactNode;
 }) {
   return (
-    <section className="min-h-screen px-8 pt-18">
+    <section className="flex-1 px-8 pt-18">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-xl font-semibold">Variants</h1>
+        <h1 className="text-xl font-semibold">State Architecture</h1>
         <p className="text-base text-muted-foreground text-start py-4">
-          Practice Motion variants: define base, hover, tap, and active states; share animation logic across components; and choreograph complex animations with simple, declarative APIs.
+          Constructing the blueprint of motion. This laboratory explores how to organize complex animation logic through declarative variants, enabling reusable states and seamless coordination across component hierarchies.
         </p>
         <VariantsNav />
         <PaginationWrapper links={navigationConfig.variants}>

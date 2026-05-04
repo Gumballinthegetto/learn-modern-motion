@@ -5,8 +5,8 @@ import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";
 
 export const metadata: Metadata = {
-  title: "Transitions Practice",
-  description: "Practice transition animations with Motion. Learn duration, ease, delay, and transition types for smooth motion experiences.",
+  title: "Temporal Physics | The Nanas Lab",
+  description: "Fine-tuning the feel of motion. Investigating duration, easing functions, and physical spring properties for organic movement.",
 };
 
 export default function TransitionsLayout({
@@ -15,10 +15,10 @@ export default function TransitionsLayout({
   children: ReactNode;
 }) {
   return (
-    <section className="min-h-screen px-8 pt-18">
+    <section className="flex-1 px-8 pt-18">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-xl font-semibold">Transitions</h1>
-        <p className="text-base text-muted-foreground text-start py-4">Practice transition animations: duration, ease, delay, and transition types. Learn to create smooth and polished motion experiences.</p>
+        <h1 className="text-xl font-semibold">Temporal Physics</h1>
+        <p className="text-base text-muted-foreground text-start py-4">Defining the weight and momentum of motion. This laboratory investigates the physical properties of a transition—tuning duration, easing functions, and spring dynamics to achieve organic, believable movement.</p>
         <TransitionsNav />
         <PaginationWrapper links={navigationConfig.transitions}>
           {children}

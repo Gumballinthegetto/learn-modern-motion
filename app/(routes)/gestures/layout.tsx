@@ -5,9 +5,9 @@ import { PaginationWrapper } from "@/components/pagination/PaginationWrapper";
 import { navigationConfig } from "@/config/navigation";
 
 export const metadata: Metadata = {
-  title: "Gestures - Motion Practice",
+  title: "Tactile Interactions | The Nanas Lab",
   description:
-    "Start your Motion gestures journey here. Use this entry point to explore exercises that teach interactive animations, touch and drag interactions, and responsive user feedback.",
+    "Analyzing the dialogue between user input and visual response. Exploring the nuances of hover, tap, and drag-based interactions.",
 };
 
 export default function GesturesLayout({
@@ -16,11 +16,11 @@ export default function GesturesLayout({
   children: ReactNode;
 }) {
   return (
-    <section className="min-h-screen px-8 pt-18">
+    <section className="flex-1 px-8 pt-18">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-xl font-semibold">Gestures</h1>
+        <h1 className="text-xl font-semibold">Tactile Interactions</h1>
         <p className="text-base text-muted-foreground text-start py-4">
-          Practice Motion gestures: handle hover, tap, and drag interactions; create responsive feedback with whileHover and whileTap; and build intuitive user experiences with drag constraints and momentum.
+          Deciphering the language of touch and intent. This laboratory investigates how interfaces respond to human input, from the subtlety of a hover to the physics-based feedback of a drag interaction.
         </p>
         <GesturesNav />
         <PaginationWrapper links={navigationConfig.gestures}>
