@@ -2,8 +2,8 @@
 
 import CloseBtn from "@/components/CloseBtn";
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
-import { KissEmojiIcon } from "@/public/assets/assets";
+import Lab from "@/components/Lab";
+import { EmojiIcon } from "@/public/assets/icons";
 import { AnimatePresence, motion, Variants } from "motion/react";
 import { useEffect, useState } from "react";
 
@@ -55,8 +55,8 @@ export default function Lab6() {
   return (
     <PopUpContainer>
       <div className="flex flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 6 - Notification Toast"
+        <Lab
+          title="Lab 6 - Notification Toast"
           objective="Create a notification toast that slides in from the top when triggered."
           instructions={[
             <>Create a component for a toast notification using <code>motion.div</code>.</>,
@@ -65,7 +65,7 @@ export default function Lab6() {
           ]}
           navLinkType="transitions"
           extraContentBelow={
-            <div className="relative practice-container px-6">
+            <div className="relative lab-container px-6">
               <AnimatePresence>
                 {isOpen && (
                   <motion.div
@@ -78,7 +78,7 @@ export default function Lab6() {
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <KissEmojiIcon width={35} height={35} />
+                        <EmojiIcon width={35} height={35} />
                         <p>Toast got clicked!</p>
                       </div>
                       <CloseBtn

@@ -2,7 +2,7 @@
 
 import PopUpContainer from "@/components/PopUpContainer";
 import { AnimatePresence, motion, useMotionValue, Variants } from "motion/react";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { useState } from "react";
 
 export default function Lab1() {
@@ -11,8 +11,8 @@ export default function Lab1() {
   return (
     <PopUpContainer>
       <div className="flex flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 1 - Simple Fade In/Out Animation"
+        <Lab
+          title="Lab 1 - Simple Fade In/Out Animation"
           objective="Create a component that fades in when it mounts and fades out when it unmounts."
           instructions={[
             <>Create a component called <code>FadeComponent</code>.</>,
@@ -22,7 +22,7 @@ export default function Lab1() {
           ]}
           navLinkType="transitions"
           extraContentBelow={
-            <div className="relative practice-container">
+            <div className="relative lab-container">
               <AnimatePresence>
                 {show && (
                   <FadeComponent />

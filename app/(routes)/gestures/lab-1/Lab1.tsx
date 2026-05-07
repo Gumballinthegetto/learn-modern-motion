@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import Underline from "@/components/Underline";
 import Banana from "@/public/assets/icons/banana";
 import { cn } from "@/utils/cn";
@@ -45,8 +45,8 @@ export default function Lab1() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 1 - Swipeable Cards"
+      <Lab
+        title="Lab 1 - Swipeable Cards"
         objective="Create cards that can be swiped left or right to the next card."
         instructions={[
           <>Create a <code>motion.div</code> to represent the card.</>,
@@ -55,7 +55,7 @@ export default function Lab1() {
         ]}
         navLinkType="gestures"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="relative w-full h-[400px] flex items-center justify-center"
               ref={constraintsRef}
@@ -97,7 +97,7 @@ const Card = ({
   return (
     <motion.div
       className={cn(
-        "absolute border rounded-md bg-black w-[18rem] h-[16rem] overflow-hidden",
+        "absolute border rounded-md bg-black/50 backdrop-blur-sm w-[18rem] h-64 overflow-hidden",
         isActive ? "cursor-grab" : "cursor-default",
       )}
       initial={false}
@@ -130,7 +130,7 @@ const Card = ({
         />
       </div>
       <div className="flex flex-col items-center px-4 py-4">
-        <h2 className="font-[500] text-[4rem]">No.{card.number}</h2>
+        <h2 className="font-medium text-[4rem]">No.{card.number}</h2>
         <div className="relative pb-1">
           <p>Type: {card.type}</p>
           <Underline className="w-[40%]" />

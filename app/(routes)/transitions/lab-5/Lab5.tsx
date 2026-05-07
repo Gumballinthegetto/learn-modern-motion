@@ -1,9 +1,9 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import Underline from "@/components/Underline";
-import { PlusIcon } from "@/public/assets/assets";
+import { PlusIcon } from "@/public/assets/icons";
 import Banana from "@/public/assets/icons/banana";
 import { motion, Variants } from "motion/react";
 import { Dispatch, SetStateAction, useState } from "react";
@@ -45,8 +45,8 @@ export default function Lab5() {
   return (
     <PopUpContainer>
       <div className="flex flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 5 - Accordion Component"
+        <Lab
+          title="Lab 5 - Accordion Component"
           objective="Create an accordion component that expands and collapes on click."
           instructions={[
             "Create a component that renders a list of items, each with a title and content.",
@@ -55,11 +55,11 @@ export default function Lab5() {
           ]}
           navLinkType="transitions"
           extraContentBelow={
-            <motion.div className="practice-container gap-10">
+            <motion.div className="lab-container gap-10">
               <div className="relative flex flex-col items-center gap-4 justify-center">
                 <Banana className="text-accent" width={50} height={50} />
                 <div className="flex flex-col items-center justify-center">
-                  <p>Practice 5</p>
+                  <p>Lab 5</p>
                   <div className="relative">
                     <h2 className="text-[1.3rem]">Accordion Component</h2>
                     <Underline />

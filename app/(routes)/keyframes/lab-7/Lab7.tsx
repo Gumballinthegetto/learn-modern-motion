@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from 'motion/react';
 
 export default function Lab7() {
@@ -19,8 +19,8 @@ export default function Lab7() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 7 - Background Animation"
+      <Lab
+        title="Lab 7 - Background Animation"
         objective="Create a background that changes color using keyframes."
         instructions={[
           'Create a full-screen div that acts as a background.',
@@ -29,7 +29,7 @@ export default function Lab7() {
         ]}
         navLinkType="keyframes"
         extraContentBelow={
-          <div className="relative practice-container">
+          <div className="relative lab-container">
             <motion.div
               variants={backgroundVariants}
               className="rounded-md border absolute inset-8"

@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, useMotionValue, useTransform } from "motion/react";
 import { useRef } from "react";
 
@@ -15,8 +15,8 @@ export default function Lab1() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 1 - Draggable Box"
+      <Lab
+        title="Lab 1 - Draggable Box"
         objective="Create a draggable box that updates its position using useMotionValue."
         instructions={[
           <>Create a <code>motion.div</code> that can be dragged around.</>,
@@ -25,7 +25,7 @@ export default function Lab1() {
         ]}
         navLinkType="motionValue"
         extraContentBelow={
-          <div ref={containerRef} className="practice-container">
+          <div ref={containerRef} className="lab-container">
             <motion.div
               className="bg-accent rounded-lg w-[120px] h-[120px] cursor-grab active:cursor-grabbing"
               drag

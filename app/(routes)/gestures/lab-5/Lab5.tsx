@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from 'motion/react';
 import { ReactNode, useRef, useState } from "react";
 
@@ -27,8 +27,8 @@ export default function Lab5() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 5 - Long Press to Change Size"
+      <Lab
+        title="Lab 5 - Long Press to Change Size"
         objective="Create a box that changes its size when long-pressed."
         instructions={[
           <>Create a <code>motion.div</code> that represents the box.</>,
@@ -37,7 +37,7 @@ export default function Lab5() {
         ]}
         navLinkType="gestures"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="w-[120px] h-[120px] rounded-md bg-accent cursor-pointer touch-none select-none"
               style={{

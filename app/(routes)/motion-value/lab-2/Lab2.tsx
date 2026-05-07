@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, useMotionValue, useTransform } from "motion/react";
 
 export default function Lab2() {
@@ -22,8 +22,8 @@ export default function Lab2() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 2 - Hover-Linked Scale"
+      <Lab
+        title="Lab 2 - Hover-Linked Scale"
         objective="Create a button that scales up when hovered, using useMotionValue."
         instructions={[
           <>Create a <code>motion.button</code>.</>,
@@ -32,7 +32,7 @@ export default function Lab2() {
         ]}
         navLinkType="motionValue"
         extraContentBelow={
-          <div className="relative practice-container gap-10">
+          <div className="relative lab-container gap-10">
             <motion.button
               onHoverStart={handleHoverStart}
               onHoverEnd={handleHoverEnd}

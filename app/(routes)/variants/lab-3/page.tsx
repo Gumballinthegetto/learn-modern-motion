@@ -3,8 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Variants Lab 3 - Tooltip with Variants",
-  description:
-    "Create a tooltip that appears and disappears with a fade effect using visible and hidden state variants.",
+  description: "Create a tooltip that appears and disappears with a fade effect.",
 };
 
 export default function VariantsLab3() {

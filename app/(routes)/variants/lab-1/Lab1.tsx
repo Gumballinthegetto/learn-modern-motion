@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from 'motion/react';
 
 export default function Lab1() {
@@ -23,8 +23,8 @@ export default function Lab1() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 1 - Simple Fade-In Component"
+      <Lab
+        title="Lab 1 - Simple Fade-In Component"
         objective="Create a component that fades in when it appears."
         instructions={[
           'Define a variant for the fade-in effect.',
@@ -33,7 +33,7 @@ export default function Lab1() {
         ]}
         navLinkType="variants"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="w-[120px] h-[120px] rounded-md bg-accent"
               variants={fadeInVariants}

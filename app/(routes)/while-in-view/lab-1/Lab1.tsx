@@ -1,31 +1,72 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
-import { motion } from "motion/react";
-import { useRef } from "react";
+import Lab from "@/components/Lab";
+import { motion, stagger, Variants } from "motion/react";
+import { MouseScrollIcon } from "@/public/assets/icons";
 
 export default function Lab1() {
-  const containerRef = useRef(null);
+  const containerVariants: Variants = {
+    initial: {},
+    animate: {
+      transition: {
+        delayChildren: stagger(.1, { from: 'first' }),
+        when: 'beforeChildren', // Wait for the parent to finish before starting the children
+      },
+    },
+  };
 
+  const itemsVariants: Variants = {
+    initial: {
+      y: -10,
+      x: 10,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        ease: 'easeInOut',
+      },
+    },
+  }; 
+  
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 1 - Staggered Fade and Slide In"
+      <Lab
+        title="Lab 1 - Staggered Fade and Slide In"
         objective="Create a list of items that fade and slide in staggered when they come into view."
         instructions={[
-          'Add the `whileInView` prop to a `motion.div`.',
-          'Define an `initial` state that is hidden (e.g., `opacity: 0`).',
-          'Set the `whileInView` state to be visible (e.g., `opacity: 1`).',
+          'Create an array of items to display.',
+          <>Use <code>motion.ul</code> for the list and <code>motion.li</code> for each item.</>,
+          <>Implement staggered animations using <code>variants</code> and the <code>transition</code> prop.</>,
         ]}
         navLinkType="whileInView"
         extraContentBelow={
-          <div ref={containerRef} className="practice-container">
-            <motion.div
-              className="bg-accent rounded-lg w-[120px] h-[120px]"
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 50 }}
-            />
+          <div className="lab-container">
+            <div className="h-[50vh] flex flex-col items-center justify-start gap-4">
+              <div className="flex items-center justify-center pt-10 gap-4">
+                <MouseScrollIcon className="w-7 h-7" />
+                <p className="text-base font-semibold text-white">Scroll down to see the animation</p>
+              </div>
+            </div>
+            <motion.ul
+              className="flex flex-col gap-6 items-center justify-center"
+              variants={containerVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: .5 }}
+            >
+              {...Array.from({ length: 4 }, (_, index) => (
+                <motion.li
+                  key={index}
+                  className="w-[90px] h-[90px] bg-accent rounded-lg"
+                  variants={itemsVariants}
+                />
+              ))}
+            </motion.ul>
           </div>  
         }
       />

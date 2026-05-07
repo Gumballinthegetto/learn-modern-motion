@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from '@/components/PopUpContainer';
-import Practice from '@/components/Practice';
+import Lab from '@/components/Lab';
 import { motion, Variants } from 'motion/react';
 import { useState } from 'react';
 
@@ -24,8 +24,8 @@ export default function Lab1() {
   return (
     <PopUpContainer>
       <div className="flex flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 1 - Basic Translation"
+        <Lab
+          title="Lab 1 - Basic Translation"
           objective="Create a box that moves across the screen."
           instructions={[
             <>Create a simple box using a <code>div</code>.</>,
@@ -33,7 +33,7 @@ export default function Lab1() {
           ]}
           navLinkType='transformations'
           extraContentBelow={
-            <div className='practice-container'>
+            <div className='lab-container'>
               <motion.div
                 variants={containerVariant}
                 initial="initial"

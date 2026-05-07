@@ -3,7 +3,7 @@ import Lab2 from "./Lab2";
 
 export const metadata: Metadata = {
   title: "Transitions Lab 2 - Slide In from the Right",
-  description: "Advanced transition practice with Motion. Explore complex timing functions and easing curves.",
+  description: "Create a sidebar that slides in from the Right when a button is clicked.",
 };
 
 export default function TransitionsLab2() {

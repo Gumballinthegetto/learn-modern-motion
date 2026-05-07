@@ -3,8 +3,7 @@ import Lab6 from "./Lab6";
 
 export const metadata: Metadata = {
   title: "Keyframes Lab 6 - Wave Effect",
-  description:
-    "Build a four-box wave animation using Motion keyframes, staggering y-offsets to create a looping wave pattern.",
+  description: "Create a wave effect using a series of boxes.",
 };
 
 export default function KeyframesLab6() {

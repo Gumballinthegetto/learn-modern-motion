@@ -1,7 +1,7 @@
 "use client";
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { cn } from "@/utils/cn";
 import { motion, stagger, Variants } from "motion/react";
 
@@ -32,8 +32,8 @@ export default function Lab4() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 4 - Staggered Grid Layout"
+      <Lab
+        title="Lab 4 - Staggered Grid Layout"
         objective="Create a grid of items that animates into view with a staggered effect."
         instructions={[
           'Create an array of items to be displayed in grid format.',
@@ -42,7 +42,7 @@ export default function Lab4() {
         ]}
         navLinkType="staggers"
         extraContentBelow={
-          <div className="practice-container p-6">
+          <div className="lab-container p-6">
             <motion.div
               variants={containerVariants}
               initial="initial"

@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from "motion/react";
 import { useState } from "react";
 
@@ -51,8 +51,8 @@ export default function Lab2() {
   return (
     <PopUpContainer>
       <div className="flex flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 2 - Pulsating Effect"
+        <Lab
+          title="Lab 2 - Pulsating Effect"
           objective="Create a pulsating effect on a button using keyframes."
           instructions={[
             <>Create a button using <code>motion.div</code>.</>,
@@ -61,7 +61,7 @@ export default function Lab2() {
           ]}
           navLinkType="keyframes"
           extraContentBelow={
-            <div className="practice-container">
+            <div className="lab-container">
               <motion.div
                 variants={buttonVariants}
                 onClick={() => {

@@ -1,7 +1,7 @@
 "use client";
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, stagger, Variants } from "motion/react";
 
 export default function Lab3() {
@@ -33,8 +33,8 @@ export default function Lab3() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 3 - Stagger Button Press"
+      <Lab
+        title="Lab 3 - Stagger Button Press"
         objective="Create a set of buttons that animate into view with a staggered effect when hovered over."
         instructions={[
           'Create a set of buttons.',
@@ -43,7 +43,7 @@ export default function Lab3() {
         ]}
         navLinkType="staggers"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               variants={containerVariants}
               initial="initial"

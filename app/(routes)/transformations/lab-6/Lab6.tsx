@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, stagger, Variants } from "motion/react";
 import { useState } from "react";
 
@@ -52,8 +52,8 @@ export default function Lab6() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 6 - Sequential Transformations"
+      <Lab
+        title="Lab 6 - Sequential Transformations"
         objective="Create an animation sequence."
         instructions={[
           'Use multiple elements (e.g., squares).',
@@ -61,7 +61,7 @@ export default function Lab6() {
         ]}
         navLinkType="transformations"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="flex items-center justify-center gap-4"
               variants={containerVariants}

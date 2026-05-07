@@ -3,8 +3,7 @@ import Lab4 from "./Lab4";
 
 export const metadata: Metadata = {
   title: "Keyframes Lab 4 - Sliding Text",
-  description:
-    "Animate text sliding in from the left using Motion keyframes, timing opacity and position for a smooth entrance.",
+  description: "Create a text components that slides in from the left using keyframes.",
 };
 
 export default function KeyframesLab4() {

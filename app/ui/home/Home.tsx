@@ -4,7 +4,7 @@ import Underline from "@/components/Underline";
 import { motion, Variants } from 'motion/react';
 import Link from "next/link";
 import Banana from "@/public/assets/icons/banana";
-import { Arrow2Icon } from "@/public/assets/assets";
+import { ArrowRightIcon } from "@/public/assets/icons";
 
 export default function Home() {
   const containerVariants: Variants = {
@@ -50,7 +50,7 @@ export default function Home() {
           variants={itemVariants}
           className="relative py-2 group"
         >
-          <h1 className="text-[2rem] md:text-6xl font-[700] tracking-tight">
+          <h1 className="text-[2rem] md:text-6xl font-bold tracking-tight">
             The Nanas Lab
           </h1>
           <Underline className="h-1 w-[85%] mx-auto origin-center" />
@@ -66,7 +66,7 @@ export default function Home() {
           variants={itemVariants}
           className="mt-10 flex flex-col sm:flex-row items-center gap-4"
         >
-          <Link href='/transformations'>
+          <Link href='/transformations/lab-1'>
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -83,7 +83,7 @@ export default function Home() {
               className="py-3 px-10 border-2 rounded-lg cursor-pointer flex items-center justify-center gap-2"
             >
               <span className="font-medium">Read Docs</span>
-              <Arrow2Icon width={24} height={24} />
+              <ArrowRightIcon width={24} height={24} />
             </motion.div>
           </Link>
         </motion.div>

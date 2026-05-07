@@ -1,8 +1,8 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
-import { DeleteIcon } from "@/public/assets/assets";
+import Lab from "@/components/Lab";
+import { DeleteIcon } from "@/public/assets/icons";
 import { AnimatePresence, motion, Variants } from 'motion/react';
 import { useState } from 'react';
 
@@ -25,8 +25,8 @@ export default function Lab5() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 5 - Dynamic List Animation"
+      <Lab
+        title="Lab 5 - Dynamic List Animation"
         objective="Create a list that animates items when they are added or removed."
         instructions={[
           'Define variants for entering and exiting the list.',
@@ -35,7 +35,7 @@ export default function Lab5() {
         ]}
         navLinkType="variants"
         extraContentBelow={
-          <div className="practice-container gap-6">
+          <div className="lab-container gap-6">
             {(items.length === 0) ? (
               <h2>No item. List is empty.</h2>
             ) : (

@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function GesturesPage() {
-  return redirect('/gestures/practice-1');
+  return redirect('/gestures/lab-1');
 }

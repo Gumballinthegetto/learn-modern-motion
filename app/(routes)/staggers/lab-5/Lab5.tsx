@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, stagger, Variants } from "motion/react";
 
 export default function Lab5() {
@@ -36,8 +36,8 @@ export default function Lab5() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Pracitce 5 - Staggered Text Reveal"
+      <Lab
+        title="Lab 5 - Staggered Text Reveal"
         objective="Create a title where each letter animates into view with a staggered effect."
         instructions={[
           'Split a string into an array of characters.',
@@ -46,7 +46,7 @@ export default function Lab5() {
         ]}
         navLinkType="staggers"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div 
               variants={containerVariants}
               initial="initial"

@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { animate, motion, useMotionValue, useTransform } from "motion/react";
 
 export default function Lab3() {
@@ -35,8 +35,8 @@ export default function Lab3() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 3 - Spring-Animation Position"
+      <Lab
+        title="Lab 3 - Spring-Animation Position"
         objective="Create a box that springs to a new position when clicked."
         instructions={[
           <>Create a <code>motion.div</code> that can be clicked to move to a new position.</>,
@@ -46,7 +46,7 @@ export default function Lab3() {
         ]}
         navLinkType="motionValue"
         extraContentBelow={
-          <div className="relative practice-container gap-10">
+          <div className="relative lab-container gap-10">
             <motion.button
               onClick={handleClick}
               style={{

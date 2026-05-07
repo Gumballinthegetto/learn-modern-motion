@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Lab6 from "./Lab6";
 
 export const metadata: Metadata = {
-  title: "Transitions Lab 6 - Animated Tabs",
-  description:
-    "Build animated tabs with Motion transitions—use shared layout animations, smooth underlines, and content fades for seamless state changes.",
+  title: "Transitions Lab 6 - Notification Toast",
+  description: "Create a notification toast that slides in from the top when triggered.",
 };
 
 export default function TransitionsLab6() {

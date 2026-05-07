@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from 'motion/react';
 import { useState } from "react";
 
@@ -31,8 +31,8 @@ export default function Lab4() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 4 - Sliding Text"
+      <Lab
+        title="Lab 4 - Sliding Text"
         objective="Create a text components that slides in from the left using keyframes."
         instructions={[
           'Create a text component that animates in from the left.',
@@ -41,7 +41,7 @@ export default function Lab4() {
         ]}
         navLinkType="keyframes"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               variants={slideFromTheLeftVariants}
               initial="initial"

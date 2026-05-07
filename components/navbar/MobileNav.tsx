@@ -96,7 +96,7 @@ export default function MobileNav({ links, setIsMobileNavOpened }: MobileNavProp
               }}
             >
               <Link 
-                onClick={setIsMobileNavOpened} href={href}
+                onClick={setIsMobileNavOpened} href={`${href}/lab-1`}
               >
                 <motion.div
                   className="flex items-center gap-2"

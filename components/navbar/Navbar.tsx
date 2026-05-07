@@ -70,7 +70,7 @@ export default function Navbar() {
                 >
                   <Link
                     className="relative flex flex-col py-1"
-                    href={href}
+                    href={`${href}/lab-1`}
                   >
                     <p className="text-base">{label}</p>
                     {(pathname === href || pathname.startsWith(`${href}/`)) && (

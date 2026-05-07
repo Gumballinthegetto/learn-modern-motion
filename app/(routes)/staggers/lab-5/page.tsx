@@ -3,8 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Staggers Lab 5 - Staggered Text Reveal",
-  description:
-    "Explore granular stagger control by animating individual characters within a string for high-impact typography reveals.",
+  description: "Create a title where each letter animates into view with a staggered effect.",
 };
 export default function StaggersLab5() {
   return <Lab5 />;

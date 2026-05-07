@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { animate, motion, useMotionValue, useTransform } from "motion/react";
 
 export default function Lab4() {
@@ -23,8 +23,8 @@ export default function Lab4() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 4 - Dynamic Rotation"
+      <Lab
+        title="Lab 4 - Dynamic Rotation"
         objective="Create a component that rotates based on a motion value."
         instructions={[
           <>Create a <code>motion.div</code> that rotates when a button is clicked.</>,
@@ -33,7 +33,7 @@ export default function Lab4() {
         ]}
         navLinkType="motionValue"
         extraContentBelow={
-          <div className="relative practice-container gap-10">
+          <div className="relative lab-container gap-10">
             <motion.div
               style={{
                 rotate,

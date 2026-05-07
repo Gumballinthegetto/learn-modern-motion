@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { cn } from "@/utils/cn";
 import { motion, Variants } from "motion/react";
 import { useState } from "react";
@@ -26,8 +26,8 @@ export default function Lab5() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 5 - Zig Zag Animation"
+      <Lab
+        title="Lab 5 - Zig Zag Animation"
         objective="Create a zigzag animation for a box moving across the screen."
         instructions={[
           <>Create a square box using <code>motion.div</code>.</>,
@@ -36,7 +36,7 @@ export default function Lab5() {
         ]}
         navLinkType="keyframes"
         extraContentBelow={
-          <div className="relative practice-container">
+          <div className="relative lab-container">
             <motion.div
               variants={boxVariants}
               initial="initial"

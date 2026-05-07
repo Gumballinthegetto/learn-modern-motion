@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { cn } from "@/utils/cn";
 import { motion, Variants } from "motion/react";
 import { useState } from "react";
@@ -28,8 +28,8 @@ export default function Lab1() {
   return (
     <PopUpContainer>
       <div className="flex flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 1 - Bouncing Ball"
+        <Lab
+          title="Lab 1 - Bouncing Ball"
           objective="Create a bouncing ball animation using keyframes."
           instructions={[
             'Create a simple circular div to represent a ball.',
@@ -38,7 +38,7 @@ export default function Lab1() {
           ]}
           navLinkType="keyframes"
           extraContentBelow={
-            <div className="practice-container">
+            <div className="lab-container">
               <motion.div
                 variants={ballVariants}
                 className="rounded-full w-[120px] h-[120px] bg-accent"

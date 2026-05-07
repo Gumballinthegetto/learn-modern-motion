@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from "motion/react";
 
 export default function Lab3() {
@@ -19,8 +19,8 @@ export default function Lab3() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 3 - Color Change Animation"
+      <Lab
+        title="Lab 3 - Color Change Animation"
         objective="Create a component that changes color using keyframes."
         instructions={[
           'Create a square div that changes color continously.',
@@ -29,7 +29,7 @@ export default function Lab3() {
         ]}
         navLinkType="keyframes"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="w-[120px] h-[120px] bg-accent rounded-md"
               variants={squareVariants}

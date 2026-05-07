@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, TapInfo, Variants } from 'motion/react';
 import { useState } from "react";
 
@@ -17,8 +17,8 @@ export default function Lab4() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 4 - Tap to Change Color"
+      <Lab
+        title="Lab 4 - Tap to Change Color"
         objective="Create a box that changes color when tapped."
         instructions={[
           <>Create a <code>motion.div</code> for the box.</>,
@@ -27,7 +27,7 @@ export default function Lab4() {
         ]}
         navLinkType="gestures"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="w-[120px] h-[120px] rounded-md bg-accent cursor-pointer"
               onTap={handleOnTap}

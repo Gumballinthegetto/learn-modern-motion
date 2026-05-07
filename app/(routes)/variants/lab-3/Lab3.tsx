@@ -1,9 +1,9 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import Underline from "@/components/Underline";
-import { HelpSquareIcon } from "@/public/assets/assets";
+import { HelpSquareIcon } from "@/public/assets/icons";
 import { AnimatePresence, motion, Variants } from 'motion/react';
 import Image from "next/image";
 import { useState } from "react";
@@ -29,8 +29,8 @@ export default function Lab3() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 3 - Tooltip with Variants"
+      <Lab
+        title="Lab 3 - Tooltip with Variants"
         objective="Create a tooltip that appears and disappears with a fade effect."
         instructions={[
           'Define variants for the visible and hidden states of the tooltip.',
@@ -39,7 +39,7 @@ export default function Lab3() {
         ]}
         navLinkType="variants"
         extraContentBelow={
-          <div className="relative practice-container gap-2">
+          <div className="relative lab-container gap-2">
             <motion.div
               className="absolute top-5 flex items-center justify-center">
               <p>Hover or Click this tooltip:</p>

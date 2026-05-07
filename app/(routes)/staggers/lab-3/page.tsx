@@ -2,9 +2,9 @@ import Lab3 from "./Lab3";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Staggers Lab 3 - Animated Buttons",
+  title: "Staggers Lab 3 - Stagger Button Press",
   description:
-    "Practice using stagger effects to animate interactive button groups, enhancing the tactile feel of UI components.",
+    "Create a set of buttons that animate into view with a staggered effect when hovered over.",
 };
 export default function StaggersLab3() {
   return <Lab3 />;

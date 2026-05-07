@@ -3,9 +3,8 @@ import { getImages } from "@/libs/unsplash";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Staggers Lab 2 - Image Gallery",
-  description:
-    "Master staggering effects in image galleries, creating smooth entrance animations as visual content loads into the interface.",
+  title: "Staggers Lab 2 - Stagger Image Gallery",
+  description: "Create an image gallery where images fade in with staggered effect when loaded.",
 };
 
 export default async function StaggersLab2() {

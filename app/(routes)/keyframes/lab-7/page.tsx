@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Lab7 from "./Lab7";
 
 export const metadata: Metadata = {
-  title: "Keyframes Lab 7 - Background Color Loop",
-  description:
-    "Animate a full-screen background through multiple colors using Motion keyframes, practicing long-running loops and smooth easing.",
+  title: "Keyframes Lab 7 - Background Animation",
+  description: "Create a background that changes color using keyframes.",
 };
 
 export default function KeyframesLab7() {

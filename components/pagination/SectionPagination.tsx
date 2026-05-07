@@ -2,7 +2,7 @@
 
 import { navigationConfig } from "@/config/navigation";
 import { useSectionPagination } from "@/libs/hooks/useSectionPagination";
-import { BackIcon, NextIcon } from "@/public/assets/assets";
+import { BackIcon, NextIcon } from "@/public/assets/icons";
 import { cn } from "@/utils/cn";
 import { NavLink, NavigationKey } from "@/types/types";
 import { motion, Variants } from 'motion/react';

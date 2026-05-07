@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import Lab2 from "./Lab2";
 
 export const metadata: Metadata = {
-  title: "Keyframes Lab 2 - Pulsating Button",
-  description:
-    "Build a pulsating button using Motion keyframes to animate scale and text opacity for hover/tap feedback.",
+  title: "Keyframes Lab 2 - Pulsating Effect",
+  description: "Create a pulsating effect on a button using keyframes.",
 };
 
 export default function KeyframesLab2() {

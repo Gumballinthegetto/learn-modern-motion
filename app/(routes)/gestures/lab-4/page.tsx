@@ -3,8 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gestures Lab 4 - Tap to Change Color",
-  description:
-    "Explore tap gestures and state-driven animations by building an interactive color-changing component.",
+  description: "Create a box that changes color when tapped.",
 };
 
 export default function GesturesLab4() {

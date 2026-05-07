@@ -3,8 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gestures Lab 1 - Swipeable Cards",
-  description:
-    "Learn to build swipeable card interfaces with drag gestures, constraints, and smooth animations for next/previous navigation.",
+  description: "Create cards that can be swiped left or right to the next card.",
 };
 export default function GesturesLab1() {
   return <Lab1 />;

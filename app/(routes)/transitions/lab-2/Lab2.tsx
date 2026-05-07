@@ -1,8 +1,8 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
-import { ArrowIcon, SideBarIcon2 } from "@/public/assets/assets";
+import Lab from "@/components/Lab";
+import { ArrowIcon, DashboardIcon } from "@/public/assets/icons";
 import Banana from "@/public/assets/icons/banana";
 import { motion, stagger, Variants } from "motion/react";
 import { SetStateAction, useState, Dispatch } from 'react';
@@ -42,8 +42,8 @@ export default function Lab2() {
     <>
       <PopUpContainer>
         <div className="flex flex-col items-start justify-start gap-2 w-full">
-          <Practice
-            title="Practice 2 - Slide In from the Right"
+          <Lab
+            title="Lab 2 - Slide In from the Right"
             objective="Create a sidebar that slides in from the Right when a button is clicked."
             instructions={[
               <>Create a sidebar component using <code>motion.div</code>.</>,
@@ -53,7 +53,7 @@ export default function Lab2() {
             ]}
             navLinkType="transitions"
             extraContentBelow={
-              <motion.div className="practice-container p-0 relative w-full flex items-center justify-between">
+              <motion.div className="lab-container p-0 relative w-full flex items-center justify-between">
                 <motion.button
                   onClick={() => setShow((prevState) => !prevState)}
                   className={cn(
@@ -68,7 +68,7 @@ export default function Lab2() {
                     <span className="text-sm">Click me</span>
                     <ArrowIcon width={24} height={24} />
                   </motion.div>
-                  <SideBarIcon2 className="rotate-270" width={30} height={30} />
+                  <DashboardIcon className="rotate-270" width={30} height={30} />
                 </motion.button>
                 <div className="absolute bottom-8 z-10">
                   <button

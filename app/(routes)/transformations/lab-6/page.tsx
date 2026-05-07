@@ -1,9 +1,9 @@
+import { Metadata } from "next";
 import Lab6 from "./Lab6";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Transformations Lab 6 - Sequential Transformations",
-  description:
-  "Create choreographed animation sequences with multiple elements, staggered delays, and coordinated transformations.",
+  description: "Create an animation sequence.",
 };
 
 export default function TransformationsLab6Page() {

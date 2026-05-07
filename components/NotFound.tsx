@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { FingerAccessIcon } from "@/public/assets/assets";
+import { FingerAccessIcon } from "@/public/assets/icons";
 import Underline from "./Underline";
 import Link from "next/link";
 import { motion, Variants } from 'motion/react';

@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, useMotionValue, useTransform, Variants, animate } from "motion/react";
 import { useState } from "react";
 import { cn } from "@/utils/cn";
@@ -45,8 +45,8 @@ export default function Lab4() {
   return (
     <PopUpContainer>
       <div className="flex flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 4 - Responsive Animations"
+        <Lab
+          title="Lab 4 - Responsive Animations"
           objective="Make a responsive button that animates on click."
           instructions={[
             <>Using a button using <code>motion.button</code></>,
@@ -56,7 +56,7 @@ export default function Lab4() {
           ]}
           navLinkType="transitions"
           extraContentBelow={
-            <motion.div className="practice-container">
+            <motion.div className="lab-container">
               <motion.button
                 variants={buttonVariants}
                 animate={state}

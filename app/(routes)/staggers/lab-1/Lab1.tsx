@@ -1,9 +1,9 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import Underline from "@/components/Underline";
-import { CarrotIcon, FlowerIcon } from "@/public/assets/assets";
+import { CarrotIcon, FlowerIcon } from "@/public/assets/icons";
 import { AnimatePresence, motion, stagger, Variants } from "motion/react";
 import { useState } from "react";
 
@@ -99,8 +99,8 @@ export default function Lab1() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 1 - Staggered List Items"
+      <Lab
+        title="Lab 1 - Staggered List Items"
         objective="Create a list of items that animate into view with a staggered effect."
         instructions={[
           'Create an array of items (e.g. strings).',
@@ -109,7 +109,7 @@ export default function Lab1() {
         ]}
         navLinkType="staggers"
         extraContentBelow={
-          <div className="practice-container gap-5 pb-12">
+          <div className="lab-container gap-5 pb-12">
             <div className="text-center flex flex-col gap-2">
               <div className="relative pb-1">
                 <h2 className="font-medium text-[1.2rem]">My 2026 New Year Resolution:</h2>

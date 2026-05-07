@@ -1,6 +1,6 @@
 'use client';
 
-import Practice from '@/components/Practice';
+import Lab from '@/components/Lab';
 import PopUpContainer from '@/components/PopUpContainer';
 import { motion, Variants } from 'motion/react';
 import { useState } from 'react';
@@ -24,8 +24,8 @@ export default function Lab2() {
 
   return (
     <PopUpContainer>
-      <Practice
-       title='Pratice 2 - Vertical Movement'
+      <Lab
+       title="Lab 2 - Vertical Movement"
        objective='Make a circle bounce up and down.'
        instructions={[
         'Create a circle using CSS.',
@@ -33,7 +33,7 @@ export default function Lab2() {
        ]}
        navLinkType='transformations'
        extraContentBelow={
-        <div className='practice-container'>
+        <div className='lab-container'>
           <motion.div
             variants={containerVariants}
             initial="initial"

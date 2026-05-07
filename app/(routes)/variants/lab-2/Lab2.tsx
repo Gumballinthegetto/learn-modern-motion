@@ -2,9 +2,9 @@
 
 import CloseBtn from "@/components/CloseBtn";
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { navigationConfig } from "@/config/navigation";
-import { LampIcon } from "@/public/assets/assets";
+import { LightbulbIcon } from "@/public/assets/icons";
 import Banana from "@/public/assets/icons/banana";
 import { cn } from "@/utils/cn";
 import { motion, Variants } from 'motion/react';
@@ -56,8 +56,8 @@ export default function Lab2() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 2 - Navigation Menu with Slide Animation"
+      <Lab
+        title="Lab 2 - Navigation Menu with Slide Animation"
         objective="Create a navigation menu that slides in from the slide."
         instructions={[
           'Define variants for the open and closed states of the menu.',
@@ -66,7 +66,7 @@ export default function Lab2() {
         ]}
         navLinkType="variants"
         extraContentBelow={
-          <div className="relative practice-container">
+          <div className="relative lab-container">
             <motion.nav
               variants={navVariants}
               initial="hide"
@@ -106,7 +106,7 @@ export default function Lab2() {
                 onClick={() => setIsShown((prevState) => !prevState)}
                 className="cursor-pointer"
               >
-                <LampIcon width={30} height={30} />
+                <LightbulbIcon width={30} height={30} />
               </motion.button>
             </motion.div>
           </div>

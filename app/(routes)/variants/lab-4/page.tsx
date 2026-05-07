@@ -4,8 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Variants Lab 4 - Toggle Switch Animation",
-  description:
-    "Build a toggle switch that animates smoothly between on and off states using Motion variants.",
+  description: "Create a toggle switch that animates between \"on\" and \"off\" states.",
 };
 
 export default function VariantsLab4() {

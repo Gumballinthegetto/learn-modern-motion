@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import Banana from "@/public/assets/icons/banana";
 import { cn } from "@/utils/cn";
 import { motion, Variants } from "motion/react";
@@ -27,8 +27,8 @@ export default function Lab3() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 3 - Rotation Animation"
+      <Lab
+        title="Lab 3 - Rotation Animation"
         objective="Spin an icon continuously."
         instructions={[
           'Use an SVG icon or image.',
@@ -36,7 +36,7 @@ export default function Lab3() {
         ]}
         navLinkType='transformations'
         extraContentBelow={
-          <motion.div className="practice-container">
+          <motion.div className="lab-container">
             <motion.div
               variants={containerVariants}
               initial="initial"

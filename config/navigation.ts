@@ -56,7 +56,5 @@ export const navigationConfig = {
     { href: '/while-in-view/lab-1', label: 'Lab 01' },
     { href: '/while-in-view/lab-2', label: 'Lab 02' },
     { href: '/while-in-view/lab-3', label: 'Lab 03' },
-    { href: '/while-in-view/lab-4', label: 'Lab 04' },
-    { href: '/while-in-view/lab-5', label: 'Lab 05' },
   ],
 };

@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeScreenIcon, GesturesIcon, KeyframesIcon, MotionValueIcon, StaggersIcon, TransformationIcon, VariantsIcon, WhileInViewIcon } from '@/public/assets/assets';
+import { ChangeScreenIcon, GesturesIcon, KeyframesIcon, MotionValueIcon, StaggersIcon, TransformationIcon, VariantsIcon, WhileInViewIcon } from '@/public/assets/icons';
 import { createContext, useContext, useState, ReactNode } from 'react';
 
 export type LinksProps = {

@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { UnsplashImage } from "@/libs/unsplash";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, DragHandler, motion, Variants } from 'motion/react';
@@ -63,8 +63,8 @@ export default function Lab6({ images }: Lab6Props) {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 6 - Gesture-Based Image Gallery"
+      <Lab
+        title="Lab 6 - Gesture-Based Image Gallery"
         objective="Create an image gallery that can be navigated vertically."
         instructions={[
           <>Create a <code>motion.div</code> for the gallery that contains the images.</>,
@@ -73,7 +73,7 @@ export default function Lab6({ images }: Lab6Props) {
         ]}
         navLinkType="gestures"
         extraContentBelow={
-          <div className="practice-container px-6">
+          <div className="lab-container px-6">
             <div
               className="relative w-full h-[500px] overflow-hidden"
             >

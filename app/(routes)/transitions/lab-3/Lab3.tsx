@@ -2,7 +2,7 @@
 
 import CloseBtn from "@/components/CloseBtn";
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import Underline from "@/components/Underline";
 import Banana from "@/public/assets/icons/banana";
 import { AnimatePresence, motion, Variants } from "motion/react";
@@ -18,8 +18,8 @@ export default function Lab3() {
   return (
     <PopUpContainer>
       <div className="flex-col items-start justify-start gap-2 w-full">
-        <Practice
-          title="Practice 3 - Modal with Transition"
+        <Lab
+          title="Lab 3 - Modal with Transition"
           objective="Create a modal that opens with a slide-down effect."
           instructions={[
             <>Create a modal component using a <code>motion.div</code>.</>,
@@ -29,7 +29,7 @@ export default function Lab3() {
           ]}
           navLinkType="transitions"
           extraContentBelow={
-            <motion.div className="relative practice-container">
+            <motion.div className="relative lab-container">
               <motion.div className="absolute top-5 w-[90%]">
                 <AnimatePresence>
                   {show && (
@@ -85,7 +85,7 @@ const Modal = ({ setIsShown }: ModalProps) => {
       <div className="relative flex flex-col">
         <div className="flex items-start justify-between">
           <div className="flex flex-col items-start justify-center">
-            <h4 className="text-[0.9rem]">Practice 3</h4>
+            <h4 className="text-[0.9rem]">Lab 3</h4>
             <div className="relative w-fit pb-1">
               <h3 className="text-[1.1rem]">Modal with Transition</h3>
               <Underline />

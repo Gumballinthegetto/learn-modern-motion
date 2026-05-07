@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from "motion/react";
 import { useState } from "react";
 
@@ -70,8 +70,8 @@ export default function Lab4() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practic 4 - Toggle Switch Animation"
+      <Lab
+        title="Lab 4 - Toggle Switch Animation"
         objective='Create a toggle switch that animates between "on" and "off" states.'
         instructions={[
           'Define variants for an "on" and "off" states.',
@@ -80,7 +80,7 @@ export default function Lab4() {
         ]}
         navLinkType="variants"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.button
               type="button"
               className="cursor-pointer"

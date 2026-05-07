@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { cn } from "@/utils/cn";
 import { DragHandler, motion, Variants } from 'motion/react';
 import { useRef, useState } from "react";
@@ -28,8 +28,8 @@ export default function Lab3() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 3 - Rotate on Drag"
+      <Lab
+        title="Lab 3 - Rotate on Drag"
         objective="Create a box that rotates when being dragged."
         instructions={[
           <>Create a <code>motion.div</code> to represent the box.</>,
@@ -38,7 +38,7 @@ export default function Lab3() {
         ]}
         navLinkType="variants"
         extraContentBelow={
-          <div className="practice-container" ref={constraintsRef}>
+          <div className="lab-container" ref={constraintsRef}>
             <motion.div
               className={cn(
                 "rounded-md w-[120px] h-[120px] bg-accent",

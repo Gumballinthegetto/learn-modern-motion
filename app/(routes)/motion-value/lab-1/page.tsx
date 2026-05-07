@@ -3,8 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Motion Values Lab 1 - Draggable Box",
-  description:
-    "Learn to use useMotionValue to track and display the real-time position of draggable elements.",
+  description: "Create a draggable box that updates its position using useMotionValue.",
 };
 
 export default function MotionValueLab1Page() {

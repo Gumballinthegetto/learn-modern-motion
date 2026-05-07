@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from "motion/react";
 import { useState } from "react";
 
@@ -31,8 +31,8 @@ export default function Lab5() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 5 - Combined Transformations"
+      <Lab
+        title="Lab 5 - Combined Transformations"
         objective="Create a complex animation combining multiple transformations."
         instructions={[
           'Create a shape (e.g., a square or circle).',
@@ -40,7 +40,7 @@ export default function Lab5() {
         ]}
         navLinkType='transformations'
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="w-[120px] h-[120px] bg-accent rounded-lg"
               variants={containerVariants}

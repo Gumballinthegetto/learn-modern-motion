@@ -1,11 +1,14 @@
+import { getImages } from "@/libs/unsplash";
 import Lab2 from "./Lab2";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "While In View Lab 2",
-  description: "Learn to trigger animations when elements enter the viewport using whileInView.",
+  title: "While In View Lab 2 - Card Flip Animation",
+  description: "Create a card that flips when it comes into view, revealing its back side.",
 };
 
-export default function WhileInViewLab2Page() {
-  return <Lab2 />;
+export default async function WhileInViewLab2Page() {
+  const images = await getImages(1);
+
+  return <Lab2 image={images[0]} />;
 }

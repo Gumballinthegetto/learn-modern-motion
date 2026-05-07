@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from "motion/react";
 
 export default function Lab6() {
@@ -60,8 +60,8 @@ export default function Lab6() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Exercise 6 - Wave Effect"
+      <Lab
+        title="Lab 6 - Wave Effect"
         objective="Create a wave effect using a series of boxes."
         instructions={[
           'Create a series of boxes in a row.',
@@ -70,7 +70,7 @@ export default function Lab6() {
         ]}
         navLinkType="keyframes"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="flex items-center justify-center gap-4"
               variants={parentVariants}

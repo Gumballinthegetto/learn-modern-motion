@@ -3,8 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gestures Lab 3 - Rotate on Drag",
-  description:
-    "Combine drag events with rotation calculations to create dynamic, interactive elements that respond to user movement.",
+  description: "Create a box that rotates when being dragged.",
 };
 
 export default function GesturesLab3() {

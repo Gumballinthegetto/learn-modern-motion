@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { UnsplashImage } from "@/libs/unsplash";
 import { useState } from "react";
 import { motion, stagger, Variants } from "motion/react";
@@ -41,8 +41,8 @@ export default function Lab2({ images }: Lab2Props) {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 2 - Stagger Image Gallery"
+      <Lab
+        title="Lab 2 - Stagger Image Gallery"
         objective="Create an image gallery where images fade in with staggered effect when loaded."
         instructions={[
           'Create an array of image URLs.',
@@ -51,7 +51,7 @@ export default function Lab2({ images }: Lab2Props) {
         ]}
         navLinkType="staggers"
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div 
               className="flex flex-wrap items-center justify-center gap-4 w-full h-[65vh] px-2 overflow-y-auto"
               variants={containerVariants}

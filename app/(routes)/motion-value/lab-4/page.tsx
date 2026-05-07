@@ -3,8 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Motion Values Lab 4 - Dynamic Rotation",
-  description:
-    "Master advanced useTransform techniques to map raw motion values into formatted CSS strings like rotation degrees.",
+  description: "Create a component that rotates based on a motion value.",
 };
 
 export default function MotionValueLab4Page() {

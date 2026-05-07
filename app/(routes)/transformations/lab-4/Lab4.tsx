@@ -1,7 +1,7 @@
 'use client';
 
 import PopUpContainer from "@/components/PopUpContainer";
-import Practice from "@/components/Practice";
+import Lab from "@/components/Lab";
 import { motion, Variants } from 'motion/react';
 import { useState } from "react";
 
@@ -21,8 +21,8 @@ export default function Lab4() {
 
   return (
     <PopUpContainer>
-      <Practice
-        title="Practice 4 - Skewed Transition"
+      <Lab
+        title="Lab 4 - Skewed Transition"
         objective="Animate a rectangle and return to normal when clicked again."
         instructions={[
           'Create a rectangle using tailwind CSS.',
@@ -30,7 +30,7 @@ export default function Lab4() {
         ]}
         navLinkType='transformations'
         extraContentBelow={
-          <div className="practice-container">
+          <div className="lab-container">
             <motion.div
               className="w-[180px] h-[120px] bg-accent rounded-lg"
               variants={containerVariants}
