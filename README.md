@@ -1,23 +1,23 @@
-# 🍌 The Nanas Lab
+# The Nanas Lab
 
 An experimental animation playground by **Nanas Corp**. This project is a curated collection of motion patterns and implementation showcases built with **Motion v12** and **Next.js 16**.
 
 Instead of just theory, **The Nanas Lab** focuses on the *how*. Each experiment is a journey from a set of instructions to a living, breathing animation pattern, serving as a reference library for modern web motion.
 
-## ✨ Research Areas
+## Research Areas
 
 The lab is organized into several key animation categories, each containing multiple practical implementations:
 
-- **🖱️ Gestures**: Interactive animations triggered by hover, tap, pan, and drag.
-- **🎞️ Keyframes**: Multi-stage animations with complex sequences.
-- **📊 Motion Value**: Tracking and reacting to dynamic values like scroll progress or cursor position.
-- **🎭 Variants**: Organized animation states for cleaner, reusable code and staggered children.
-- **🌊 Staggers**: Orchestrating animations for lists and groups of elements.
-- **🔄 Transformations**: Position, scale, rotation, and skew animations.
-- **⚡ Transitions**: Fine-tuning easing, duration, and spring physics.
-- **👁️ While In View**: Animations triggered by scroll and viewport entry.
+- **Gestures**: Interactive animations triggered by hover, tap, pan, and drag.
+- **Keyframes**: Multi-stage animations with complex sequences.
+- **Motion Value**: Tracking and reacting to dynamic values like scroll progress or cursor position.
+- **Variants**: Organized animation states for cleaner, reusable code and staggered children.
+- **Staggers**: Orchestrating animations for lists and groups of elements.
+- **Transformations**: Position, scale, rotation, and skew animations.
+- **Transitions**: Fine-tuning easing, duration, and spring physics.
+- **While In View**: Animations triggered by scroll and viewport entry.
 
-## 🚀 Key Features
+## Key Features
 
 - **Implementation-First**: Focus on real-world animation patterns ready for production.
 - **Interactive Labs**: Each experiment includes a set of objectives and instructions to guide the implementation.
@@ -25,7 +25,7 @@ The lab is organized into several key animation categories, each containing mult
 - **Responsive Design**: All animations and UI are optimized for both desktop and mobile experiences.
 - **Shared Design System**: Consistent typography (Lexend Deca) and a custom color palette across all labs.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
 - **Library**: [Motion v12](https://motion.dev/)
@@ -33,7 +33,7 @@ The lab is organized into several key animation categories, each containing mult
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Typography**: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
 
-## 📂 Project Structure
+## Project Structure
 
 - `app/(routes)/` - The core laboratory containing categorized animation experiments (Gestures, Keyframes, etc.).
 - `app/ui/` - Page-specific UI components and layout logic.
@@ -46,7 +46,7 @@ The lab is organized into several key animation categories, each containing mult
 - `libs/` & `utils/` - Shared utility functions and library initializations.
 - `provider/` - Global state providers (e.g., Mobile Menu, Theme).
 
-## 🚀 Lab Setup
+## Lab Setup
 
 ### Prerequisites
 - Node.js (Latest LTS)
@@ -63,13 +63,13 @@ pnpm dev
 ```
 The lab will be available at `http://localhost:3000`.
 
-## 📜 Credits & Resources
+## Credits & Resources
 
 - **Icons**: [Hugeicons](https://hugeicons.com/) (`@hugeicons/react`)
 - **Photography**: [Unsplash](https://unsplash.com/)
 - **Illustrations**: [unDraw](https://undraw.co/)
 - **Inspiration**: Implementations inspired by modern motion design patterns and the Motion.dev community.
 
-## ⚖️ License
+## License
 
 MIT — Created with passion by **Nanas Corp**.
