@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Create a card that flips when it comes into view, revealing its back side.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function WhileInViewLab2Page() {
   const images = await getImages(1);
 

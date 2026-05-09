@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Create an image gallery that can be navigated vertically.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function GesturesLab6() {
   const images = await getImages(10);
 

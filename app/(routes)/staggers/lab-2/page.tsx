@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Create an image gallery where images fade in with staggered effect when loaded.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function StaggersLab2() {
   const images = await getImages(10);
 
