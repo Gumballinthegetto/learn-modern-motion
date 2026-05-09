@@ -26,8 +26,11 @@ export async function getImages(count: number): Promise<UnsplashImage[]> {
   const accessKey = process.env.UNSPLASH_ACCESS_KEY;
 
   if (!accessKey) {
-    console.warn("UNSPLASH_ACCESS_KEY is missing. Using fallback images.");
-    return MOCK_IMAGES.slice(0, count);
+    console.error("❌ UNSPLASH_ACCESS_KEY is missing in environment variables.");
+    return MOCK_IMAGES.slice(0, count).map(img => ({
+      ...img,
+      alt_description: "Error: Missing API Key"
+    }));
   }
 
   try {
@@ -39,13 +42,22 @@ export async function getImages(count: number): Promise<UnsplashImage[]> {
     });
 
     if (!res.ok) {
-      console.error(`Unsplash API error: ${res.statusText}. Using fallback images.`);
-      return MOCK_IMAGES.slice(0, count);
+      const errorData = await res.json().catch(() => ({}));
+      const errorMessage = errorData.errors?.[0] || res.statusText;
+      console.error(`❌ Unsplash API error (${res.status}): ${errorMessage}`);
+      
+      return MOCK_IMAGES.slice(0, count).map(img => ({
+        ...img,
+        alt_description: `Error ${res.status}: ${errorMessage}`
+      }));
     }
 
     return res.json();
   } catch (error) {
-    console.error("Failed to fetch from Unsplash. Using fallback images.", error);
-    return MOCK_IMAGES.slice(0, count);
+    console.error("❌ Network error fetching from Unsplash:", error);
+    return MOCK_IMAGES.slice(0, count).map(img => ({
+      ...img,
+      alt_description: "Error: Network/Fetch Failure"
+    }));
   }
 }
