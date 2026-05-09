@@ -4,6 +4,22 @@ An experimental animation playground by **Nanas Corp**. This project is a curate
 
 Instead of just theory, **The Nanas Lab** focuses on the *how*. Each experiment is a journey from a set of instructions to a living, breathing animation pattern, serving as a reference library for modern web motion.
 
+## Preview
+
+### Desktop
+<div align="center">
+  <img src="public/screenshots/desktop-view.jpg" width="100%" alt="Desktop View">
+  <img src="public/screenshots/desktop-section-view.jpg" width="100%" alt="Desktop Section View">
+</div>
+
+### Mobile
+<div align="center">
+  <img src="public/screenshots/mobile-view.jpg" width="24%" alt="Mobile View">
+  <img src="public/screenshots/mobile-section-view.jpg" width="24%" alt="Mobile Section View">
+  <img src="public/screenshots/mobile-section-scroll-view.jpg" width="24%" alt="Mobile Section Scroll View">
+  <img src="public/screenshots/mobile-nav-view.jpg" width="24%" alt="Mobile Nav View">
+</div>
+
 ## Research Areas
 
 The lab is organized into several key animation categories, each containing multiple practical implementations:

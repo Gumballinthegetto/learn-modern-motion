@@ -15,9 +15,7 @@ export async function getImages(count: number) {
     headers: {
       Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY}`,
     },
-    next: {
-      revalidate: 3600,
-    },
+    cache: 'no-store',
   });
 
   if (!res.ok) {
