@@ -47,13 +47,13 @@ export default function Lab3() {
               </div>
             </div>
             <motion.div
-              className="bg-accent rounded-lg w-[120px] h-[120px] my-20"
+              className="bg-accent rounded-lg w-[120px] h-[120px] my-30"
               variants={shapeVariants}
               initial="initial"
               whileInView="whileInView"
-              viewport={{ once: false, amount: .1 }}
+              viewport={{ once: false, amount: .05 }}
             />
-          </div>  
+          </div>
         }
       />
     </PopUpContainer>
